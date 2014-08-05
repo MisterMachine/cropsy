@@ -1,0 +1,1 @@
+Cropsy.ApplicationAdapter = DS.FixtureAdapter;
