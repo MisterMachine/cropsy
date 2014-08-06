@@ -1,0 +1,45 @@
+.footer {
+	background-color: darken(#4e4e55, 10%);
+	color: #fff;
+	padding-top: 2em;
+	
+	a {
+		color: #fff;
+	}
+	
+	.sock {
+		background-color: #4e4e55;
+		padding-top: 1em;
+	}
+	
+	.serif {
+		font-weight: 300;	
+	}
+}
+
+.footer-menu {
+	margin: 0;
+	margin-top: 2em;
+	margin-bottom: 3em;
+	overflow: hidden;
+	
+	ul {
+		margin: 0;
+	}
+	
+	li {
+		list-style: none;
+		font-size: .925em;
+		line-height: 2em;
+		
+		&.column {
+			@media #{$medium-up} {
+				@include grid-column($columns:2);
+			}
+		}
+		
+		a {
+			font-weight: 400;
+		}
+	}
+}

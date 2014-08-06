@@ -1,0 +1,23 @@
+.style-2 {
+	.swatch {
+		&:nth-child(1) {
+			background-color: $primary-color-2;
+		}
+		
+		&:nth-child(2) {
+			background-color: $secondary-color-2;
+		}
+		
+		&:nth-child(3) {
+			background-color: $wash-color-2;
+		}
+		
+		&:nth-child(4) {
+			background-color: $alert-color-2;
+		}
+		
+		&:nth-child(5) {
+			background-color: $success-color-2;
+		}
+	}
+}

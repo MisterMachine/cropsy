@@ -1,0 +1,74 @@
+.panel {
+	background: transparent;
+	border: none;
+	
+	.button {
+		background-color: #fff;
+		color: #333;
+		text-transform: uppercase;
+		font-weight: 600;
+		width: 100%;
+	}
+	
+	&.bright {
+		background-color: $primary-color-3;
+		%hN, p {
+			color: #fff;
+			text-align: center;
+		}
+	}	
+	
+	&.dark {
+		background-color: darken($success-color-3, 10%);
+		%hN, p {
+			color: #fff;
+			text-align: center;
+		}
+	}
+	
+	&.bright p, &.dark p {
+		color: rgba(#fff, .5);
+	}
+	
+	&.lined {
+		border-top: 5px solid $success-color-3;
+		padding-left: 0;
+		padding-right: 0;
+		
+		.aside {
+			border-top: 1px solid #efefef;
+			padding: 1.5em 2em;
+			padding-bottom: 0;
+		}
+	}
+}	
+
+.style-2 {
+	.panel {
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		text-align: center;
+		
+		h5 {
+			padding: .5em;
+			border-bottom: 1px solid #DBDBDB;
+			border-top: 5px solid #DBDBDB;
+			font-family:$sans-condensed-font-family;
+			text-transform: uppercase;
+			font-weight: 400;
+			letter-spacing: 1px;
+		}
+		
+		p {
+			padding: .5em;
+			font-weight: 200;
+		}
+		
+		.button {
+			margin: .5em;
+			@include border-radius (1000px);
+		}
+	}
+}
+	

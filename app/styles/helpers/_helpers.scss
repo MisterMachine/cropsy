@@ -1,0 +1,21 @@
+.alignleft {
+	@media #{$large-up} {
+		float: left;
+		margin-right: 2em;
+		margin-bottom:  3em;
+		margin-left: -10rem;
+	}
+}
+
+.alignright {
+	@media #{$large-up} {
+		float: right;
+		margin-left: 2em;
+		margin-bottom:  3em;
+		margin-right: -10rem;
+	}
+}
+
+.relative {
+	position: relative;
+}

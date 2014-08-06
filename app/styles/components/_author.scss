@@ -1,0 +1,48 @@
+.author {
+	overflow: hidden;
+	margin-bottom: 2em;
+	padding-top: 3em;
+	
+	.h-section {
+		margin-top: -1em;
+		margin-bottom: 1em;
+	}
+	
+	p {
+		font-family: $sans-font-family;
+		font-size: .925em;
+		line-height: 1.825em;
+	}
+	
+	.avatar {
+		float: left;		
+		height: 133px;
+		overflow: hidden;
+		
+		@include border-radius(50%);
+		
+	}
+	
+	&.aside {
+		margin-bottom: 1em;
+		padding: 0;
+		
+		.avatar {
+			margin-right: 1em;
+			height: auto;
+		}
+	}
+}
+
+.wash {
+	background-color: #efefef;
+}
+
+.style-2 {
+	.h-section {
+		font-family: $sans-condensed-font-family-2;
+		font-weight: 300;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}

@@ -1,0 +1,127 @@
+$h1-font-size: rem-calc(44);
+$h2-font-size: rem-calc(37);
+$h3-font-size: rem-calc(27);
+$h4-font-size: rem-calc(23);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
+
+%hN {
+  font-family: $sans-font-family-3;
+	text-rendering: optimizeLegibility; 
+	display: block;
+	font-weight: 600;
+
+	line-height: 1.125em;
+	margin-bottom: .5em;
+}
+
+h1,
+.alpha {
+	@extend %hN;
+	font-size: $h1-font-size;
+}
+
+h2,
+.beta {
+	@extend %hN;
+	font-size: $h2-font-size;
+}
+
+h3,
+.gamma {
+	@extend %hN;
+	font-size: $h3-font-size;
+}
+
+h4,
+.delta {
+	@extend %hN;
+	font-size: $h4-font-size;
+}
+
+h5,
+.epsilon {
+	@extend %hN;
+	font-size: $h5-font-size;
+}
+
+h6,
+.zeta {
+	@extend %hN;
+	font-size: $h6-font-size;
+}
+
+p {
+	font-family: $font-family-3;
+}
+
+a {
+	color: $primary-color;
+}
+
+blockquote {
+	margin-bottom: 2em;
+	
+	p {
+		font-size: 2em;
+		line-height: 1.5em;
+		margin-bottom: 2em;
+	}
+}
+
+.serif {
+	font-family:$font-family-3;
+}
+
+.sans {
+	font-family:$sans-font-family;
+}
+
+.normal {
+	font-weight: 300;
+}
+
+.light {
+	font-weight: 100;
+}
+
+.no-margin {
+	margin-bottom: .5em;
+}
+
+.rhythm {
+	margin-bottom: 1em;
+}
+
+.style-2 {
+	%hN {
+		font-family: $font-family-2;
+		font-weight: 700;
+		line-height: 1.125em;
+		margin-bottom: .5em;	
+		
+		&.sans {
+			font-weight: 300;
+		}
+	}
+	
+	h1 {
+		font-size: 3.25rem;
+	}
+	
+	p {
+		font-family:$font-family-2;
+	}
+	
+	.serif {
+		font-family:$font-family-2;
+	}
+	
+	.sans {
+		font-family:$sans-font-family-2;
+	}
+
+	a {
+		color: $primary-color-2;
+	}
+}

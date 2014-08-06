@@ -1,0 +1,109 @@
+.header {
+	margin-bottom: 2em;
+	background-color: #4e4e4e;
+	border-top: 5px solid darken(#4e4e55, 10%);
+	
+	%hN, a {
+		color: #fff;
+	}
+	
+	.tool-bar {
+		height: auto;
+		
+		@media #{$large-up} {
+			height: 3em;
+		}
+	}
+	
+	.social {
+		position: absolute;
+		top: auto;
+		bottom: .5em;
+		right: 1em;
+	
+		@media #{$large-up} {
+			top: .75em;
+			bottom: auto;
+		}
+	}	
+		
+	.logo {
+		background: #fff;
+		float: left;
+		margin-top: 0;
+		padding: .5em 1em .75em 1em;
+		position: relative;
+		
+		@media #{$large-up} {
+			position: absolute;
+			@include box-shadow(0 1px 1px rgba(0, 0, 0, 0.18));
+		}
+		
+		img {
+			height: 85px;
+		}	
+	}
+
+	.actions {
+		position: absolute;
+		top: .425em;
+		right: 1em;
+		
+		@media #{$large-up} {
+			right: 8em;
+		}
+		
+		.button {
+			padding: .75em 1.25em;
+			border: 1px solid rgba(#fff, .2);	
+			background: transparent;
+		}
+	}
+}
+
+.social {
+	[class^="icon-"], [class*=" icon-"] {
+		color: rgba(#fff, .6);	
+		font-size: 1.5em;
+		margin-left: .25em;
+	}
+}
+
+.style-2 {
+	.header {
+		padding-top: 1em;
+		text-align: center;
+		border-top: 1px solid #ddd;
+		position: relative;
+		margin-bottom: .5em;
+		
+		.logo img {
+			height: 80px;
+		}	
+		
+		.social {
+			position: absolute;
+			top: 40%;
+			
+			[class^="icon-"], [class*=" icon-"] {
+				color: lighten($success-color-3, 50%);
+				height: .5em;
+				width: .5em;
+				margin-right: 1em;
+			}
+		}
+	}
+	
+	.actions {
+		position: absolute;
+		top: 30%;
+		right: 0;
+	
+		.button {
+			@include border-radius(2px);
+			@include box-shadow(0 1px 1px rgba(0,0,0,.5));
+			padding: .5em 1.25em;
+			background: #333;
+		}
+	}
+}
