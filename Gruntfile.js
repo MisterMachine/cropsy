@@ -349,7 +349,6 @@ module.exports = function (grunt) {
         'clean:dist',
         'replace:dist',
         'useminPrepare',
-        'watch',
         'sass',
         'concurrent:dist',
         'neuter:app',
