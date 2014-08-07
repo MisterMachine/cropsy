@@ -1,14 +1,10 @@
 @import "settings";
 @import "../bower_components/foundation/scss/foundation.scss";
-@import "compass/css3";
 
 @import "base/all";
-@import "helpers/all";
-@import "layout/all";
-@import "modules/all";
+@import "extends/all";
+@import "partials/all";
 @import "components/all";
 @import "pages/all";
 
 @import "app";
-@import "style2";
-@import "style3";
