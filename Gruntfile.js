@@ -1,4 +1,4 @@
-// Generated on 2014-08-05 using generator-ember 0.8.4
+// Generated on 2014-08-07 using generator-ember 0.8.4
 'use strict';
 var LIVERELOAD_PORT = 35729;
 var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
@@ -30,10 +30,6 @@ module.exports = function (grunt) {
             emberTemplates: {
                 files: '<%= yeoman.app %>/templates/**/*.hbs',
                 tasks: ['emberTemplates']
-            },
-            compass: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-                tasks: ['compass:server']
             },
             neuter: {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
@@ -123,27 +119,6 @@ module.exports = function (grunt) {
                 options: {
                     run: true,
                     urls: ['http://localhost:<%= connect.options.port %>/index.html']
-                }
-            }
-        },
-        compass: {
-            options: {
-                sassDir: '<%= yeoman.app %>/styles',
-                cssDir: '.tmp/styles',
-                generatedImagesDir: '.tmp/images/generated',
-                imagesDir: '<%= yeoman.app %>/images',
-                javascriptsDir: '<%= yeoman.app %>/scripts',
-                fontsDir: '<%= yeoman.app %>/styles/fonts',
-                importPath: '<%= yeoman.app %>/bower_components',
-                httpImagesPath: '/images',
-                httpGeneratedImagesPath: '/images/generated',
-                httpFontsPath: '/styles/fonts',
-                relativeAssets: false
-            },
-            dist: {},
-            server: {
-                options: {
-                    debugInfo: true
                 }
             }
         },
@@ -317,9 +292,6 @@ module.exports = function (grunt) {
         }
     });
 
-    // load tasks
-    grunt.loadNpmTasks('grunt-contrib-compass');
-
     grunt.registerTask('server', function (target) {
         grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
         grunt.task.run(['serve:' + target]);
@@ -366,8 +338,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'jshint',
-        'compass',
-        //'test',
+        'test',
         'build'
     ]);
 };
