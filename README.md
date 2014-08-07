@@ -9,7 +9,7 @@ Yeoman
 
 `npm install -g yo`
 
-Ember.js Generator
+Ember.js Generator <--- might not need this for cloning project
 
 `npm install -g generator-ember`
 
@@ -23,3 +23,8 @@ Foundation
 Clone Git Repository: 
 
 `git clone https://github.com/menslow/cropsy`
+
+Install Gem dependancies:
+
+`bundle install`
+
