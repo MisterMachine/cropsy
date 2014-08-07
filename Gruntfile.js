@@ -30,15 +30,15 @@ module.exports = function (grunt) {
           dist: {
             files: [{
               expand: true,
-              cwd: '<%= yeoman.app %>/styles',
+              cwd: '<%= yeoman.app %>/sass',
               src: ['*.scss'],
               dest: '<%= yeoman.app %>/styles',
               ext: '.css'
             }],
             options: {
-              loadPath: [
-                '<%= yeoman.app %>/bower_components/bourbon/app/assets/stylesheets',
-                '<%= yeoman.app %>/bower_components/foundation/scss/foundation'
+                loadPath: [
+                '<%= yeoman.app %>/bower_components/foundation/scss/foundation',
+                '<%= yeoman.app %>/bower_components/bourbon/app/assets/stylesheets'
               ]
             }
           }
@@ -53,8 +53,8 @@ module.exports = function (grunt) {
                 tasks: ['neuter']
             },
             styles: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.scss'],
-                tasks: ['sass', 'newer:copy:styles', 'autoprefixer']
+                files: ['<%= yeoman.app %>/sass/{,*/}*.scss'],
+                tasks: ['sass']
             },
             livereload: {
                 options: {
@@ -327,6 +327,7 @@ module.exports = function (grunt) {
             'clean:server',
             'replace:app',
             'concurrent:server',
+            'sass',
             'neuter:app',
             'connect:livereload',
             'open',
@@ -339,6 +340,7 @@ module.exports = function (grunt) {
         'replace:app',
         'concurrent:test',
         'connect:test',
+        'sass',
         'neuter:app'
         //'mocha'
     ]);
@@ -347,9 +349,10 @@ module.exports = function (grunt) {
         'clean:dist',
         'replace:dist',
         'useminPrepare',
+        'watch',
+        'sass',
         'concurrent:dist',
         'neuter:app',
-        'sass',
         'concat',
         'cssmin',
         'uglify',

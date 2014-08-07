@@ -6,13 +6,12 @@ $h5-font-size: rem-calc(18);
 $h6-font-size: 1rem;
 
 %hN {
-  font-family: $sans-font-family-3;
+	font-family: $sans-font-family;
 	text-rendering: optimizeLegibility; 
 	display: block;
 	font-weight: 600;
-
 	line-height: 1.125em;
-	margin-bottom: .5em;
+	margin: .5em 0;
 }
 
 h1,
@@ -52,7 +51,7 @@ h6,
 }
 
 p {
-	font-family: $font-family-3;
+	font-family: $font-family;
 }
 
 a {
@@ -70,7 +69,7 @@ blockquote {
 }
 
 .serif {
-	font-family:$font-family-3;
+	font-family:$font-family;
 }
 
 .sans {
@@ -91,37 +90,4 @@ blockquote {
 
 .rhythm {
 	margin-bottom: 1em;
-}
-
-.style-2 {
-	%hN {
-		font-family: $font-family-2;
-		font-weight: 700;
-		line-height: 1.125em;
-		margin-bottom: .5em;	
-		
-		&.sans {
-			font-weight: 300;
-		}
-	}
-	
-	h1 {
-		font-size: 3.25rem;
-	}
-	
-	p {
-		font-family:$font-family-2;
-	}
-	
-	.serif {
-		font-family:$font-family-2;
-	}
-	
-	.sans {
-		font-family:$sans-font-family-2;
-	}
-
-	a {
-		color: $primary-color-2;
-	}
 }
