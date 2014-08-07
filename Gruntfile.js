@@ -43,6 +43,11 @@ module.exports = function (grunt) {
             }
           }
         },
+        autoprefixer: {
+          options: {
+            // Task-specific options go here.
+          },
+        },
         watch: {
             emberTemplates: {
                 files: '<%= yeoman.app %>/templates/**/*.hbs',
@@ -54,7 +59,7 @@ module.exports = function (grunt) {
             },
             styles: {
                 files: ['<%= yeoman.app %>/sass/{,*/}*.scss'],
-                tasks: ['sass']
+                tasks: ['sass', 'autoprefixer']
             },
             livereload: {
                 options: {
