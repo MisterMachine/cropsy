@@ -26,6 +26,23 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         yeoman: yeomanConfig,
+        sass: {
+          dist: {
+            files: [{
+              expand: true,
+              cwd: '<%= yeoman.app %>/styles',
+              src: ['*.scss'],
+              dest: '<%= yeoman.app %>/styles',
+              ext: '.css'
+            }],
+            options: {
+              loadPath: [
+                '<%= yeoman.app %>/bower_components/bourbon/app/assets/stylesheets',
+                '<%= yeoman.app %>/bower_components/foundation/scss/foundation'
+              ]
+            }
+          }
+        },
         watch: {
             emberTemplates: {
                 files: '<%= yeoman.app %>/templates/**/*.hbs',
@@ -34,6 +51,10 @@ module.exports = function (grunt) {
             neuter: {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
                 tasks: ['neuter']
+            },
+            styles: {
+                files: ['<%= yeoman.app %>/styles/{,*/}*.scss'],
+                tasks: ['sass', 'newer:copy:styles', 'autoprefixer']
             },
             livereload: {
                 options: {
@@ -318,8 +339,8 @@ module.exports = function (grunt) {
         'replace:app',
         'concurrent:test',
         'connect:test',
-        'neuter:app',
-        'mocha'
+        'neuter:app'
+        //'mocha'
     ]);
 
     grunt.registerTask('build', [
@@ -328,6 +349,7 @@ module.exports = function (grunt) {
         'useminPrepare',
         'concurrent:dist',
         'neuter:app',
+        'sass',
         'concat',
         'cssmin',
         'uglify',
