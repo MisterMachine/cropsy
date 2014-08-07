@@ -9,7 +9,7 @@ Yeoman
 
 `npm install -g yo`
 
-Ember.js Generator <--- might not need this for cloning project
+Ember.js Generator <-- might not need this for cloning project
 
 `npm install -g generator-ember`
 
@@ -27,4 +27,12 @@ Clone Git Repository:
 Install Gem dependancies:
 
 `bundle install`
+
+Install Bower dependancies:
+
+`bower install`
+
+Install Node dependancies:
+
+`npm install`
 
