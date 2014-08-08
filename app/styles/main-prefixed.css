@@ -6376,7 +6376,7 @@ html, body {
 @media screen and (min-width: 980px) {
   .zoomer .zoomer-controls span:hover {
     background: #000; } }
-.viewer {
+.zoomer_basic {
   height: 100%;
   width: 100%; }
 
