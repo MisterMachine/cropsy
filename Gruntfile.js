@@ -44,9 +44,10 @@ module.exports = function (grunt) {
           }
         },
         autoprefixer: {
-          options: {
-            // Task-specific options go here.
-          },
+            single_file: {
+                src: '<%= yeoman.app %>/styles/main.css',
+                dest: '<%= yeoman.app %>/styles/main-prefixed.css'
+            }
         },
         watch: {
             emberTemplates: {
