@@ -43,23 +43,23 @@
       </label>
     </fieldset>
 
-    <button class="radius" {{action 'finishCropping' this }}>Finish</button>
+    <button class="radius" {{action 'finishCropping' this }}><i class="icon-checkmark"></i> Finish</button>
   </aside>
 
   <!-- Outlet: Toolbar -->
   <footer>
     <fieldset class="toolbar">
       <div class="tool-aspect">
-        <button class="radius" {{action 'setAspectRatio' this }}>Aspect Ratio</button>
+        <button class="radius" {{action 'setAspectRatio' this }}><i class="icon-image"></i> Aspect Ratio</button>
       </div>
 
       <ul class="tool-zoom button-group radius">
-        <li><button {{action 'zoomIn' this }}>Zoom In</button></li>
-        <li><button {{action 'zoomOut' this }}>Zoom Out</button></li>
+        <li><button {{action 'zoomIn' this }}><i class="icon-plus"></i> Zoom In</button></li>
+        <li><button {{action 'zoomOut' this }}><i class="icon-minus"></i> Zoom Out</button></li>
       </ul>
 
       <div class="tool-crop">
-        <button class="radius" {{action 'cropImage' this }}>Crop</button>
+        <button class="radius" {{action 'cropImage' this }}><i class="icon-crop"></i> Crop</button>
       </div>
     </fieldset> 
   </footer>
@@ -68,3 +68,28 @@
 <div class="zoomer_wrapper zoomer_basic">
   <img src="/images/nasa-bw-1.jpg">
 </div>
+
+<section class="row">
+  <div class="icon-bar five-up">
+    <a class="item">
+      <i class="icon-wrench"></i>
+      <label>Edit</label>
+    </a>
+    <a class="item">
+      <i class="icon-checkbox-partial"></i>
+      <label>Aspect</label>
+    </a>
+    <a class="item">
+      <i class="icon-zoomin"></i>
+      <label>Zoom In</label>
+    </a>
+    <a class="item">
+      <i class="icon-zoomout"></i>
+      <label>Zoom Out</label>
+    </a>
+    <a class="item">
+      <i class="icon-crop"></i>
+      <label>Crop</label>
+    </a>
+  </div>
+</section>
