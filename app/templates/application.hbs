@@ -3,7 +3,7 @@
   <header class="notifications">
     <div data-alert class="alert-box">
       {{#link-to "index"}}Get started with {{Cropsy.applicationName}}{{/link-to}}
-      <a href="#" class="close">&times;</a>
+      <a {{action 'closeNotification' this }} class="close">&times;</a>
     </div>
   </header>
 
@@ -36,22 +36,22 @@
       </label>
     </fieldset>
 
-    <button>Finish</button>
+    <button {{action 'finishCropping' this }}>Finish</button>
   </aside>
 
   <!-- Outlet: Toolbar -->
   <footer class="toolbar">
     <fieldset>
-      <button>Aspect Ratio</button>
+      <button {{action 'setAspectRatio' this }}>Aspect Ratio</button>
     </fieldset>
 
     <fieldset>
-      <button>Zoom In</button>
-      <button>Zoom Out</button>
+      <button {{action 'zoomIn' this }}>Zoom In</button>
+      <button {{action 'zoomOut' this }}>Zoom Out</button>
     </fieldset>
 
     <fieldset>
-      <button>Crop</button>
+      <button {{action 'cropImage' this }}>Crop</button>
     </fieldset>
   </footer>
 </div>

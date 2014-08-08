@@ -1,11 +1,17 @@
 <div class="image-canvas">
+  {{#if model.url}}
   <figure>
-    <img {{bind-attr src="url"}} />
+    <img {{bind-attr src="model.url"}} />
   </figure>
+  {{else}}
+  <figure>
+    <p>We're having trouble finding your image.</p>
+  </figure>
+  {{/if}}
 </div>
 
 <footer>
-  <button>Crop</button>
+  <button {{action 'cropImage' this }}>Crop</button>
 </footer>
 
 <p>
