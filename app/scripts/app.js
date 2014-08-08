@@ -1,9 +1,9 @@
-var Cropsy = window.Cropsy = Ember.Application.create();
+var Cropsy = window.Cropsy = Ember.Application.create({
+  LOG_TRANSITIONS: true,
+  LOG_ACTIVE_GENERATION: true
+});
 
 Cropsy.applicationName = "Cropsy";
-
-
-
 
 
 /* Order and include as you please. */

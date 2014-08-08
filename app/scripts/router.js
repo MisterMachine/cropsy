@@ -6,5 +6,13 @@ Cropsy.Router.map(function () {
     });
     this.route('create');
   });
+  this.resource('stage', {
+    path: 'stage/:image_id'
+  });
+  this.resource('toolbar');
+  this.resource('results', {
+    path: 'results/:image_id'
+  });
+  this.resource('notifications');
   
 });
