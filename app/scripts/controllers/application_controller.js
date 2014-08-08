@@ -8,6 +8,10 @@ Cropsy.ApplicationController = Ember.ObjectController.extend({
 
     finishCropping: function(image) {
       console.log('finished cropping');
+
+      // example of toggling class on button click
+      //$('.result').toggleClass('active');
+
     },
 
     setAspectRatio: function(image) {
