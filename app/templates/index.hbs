@@ -1,52 +1,7 @@
-<div class="component-cropsy">
-    <header class="notifications">
-        <div data-alert class="alert-box">
-            Get started with cropsy
-            <a href="#" class="close">&times;</a>
-        </div>
-    </header>
-
-    <section class="crop-stage">
-       <div class="image-original">
-           <figure class="original">
-                <img src="http://fillmurray.com/1280/920">
-           </figure>
-           
-           <div class="selection">
-           </div>
-       </div>
-    </section>
-
-    <aside class="result-panel">
-        <figure class="result">
-            <img src="http://fillmurray.com/420/420">
-        </figure>
-
-        <fieldset>
-            <label>Height
-                <input type="text" placeholder="px" />
-            </label>
-
-            <label>Width
-                <input type="text" placeholder="px" />
-            </label>
-        </fieldset>
-
-       <button>Finish</button>
-    </aside>
-
-    <footer class="toolbar">
-        <fieldset>
-            <button>Aspect Ratio</button>
-        </fieldset>
-
-        <fieldset>
-            <button>Zoom In</button>
-            <button>Zoom Out</button>
-        </fieldset>
-
-        <fieldset>
-            <button>Crop</button>
-        </fieldset>
-    </footer>
-</div>
+<section class="index-panel">
+  <ul>
+  {{#each image in model}}
+  <li>{{#link-to 'image' image}}{{image.title}}{{/link-to}}</li>
+  {{/each}}
+  </ul>
+</section>
