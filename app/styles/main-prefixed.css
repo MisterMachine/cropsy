@@ -6044,9 +6044,6 @@ h6,
 p {
   font-family: "adelle", Georgia, serif; }
 
-a {
-  color: #a02829; }
-
 blockquote {
   margin-bottom: 2em; }
   blockquote p {
@@ -6193,21 +6190,22 @@ blockquote {
       height: 50%;
       top: 0;
       left: 0; }
+    .component-cropsy .crop-stage .selection.tinted {
+      background-color: transparent;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      top: 0;
+      left: 0; }
+      .component-cropsy .crop-stage .selection.tinted svg {
+        fill: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%; }
 .component-cropsy .toolbar {
   padding: 1em 0; }
-.component-cropsy .tinted .image-original {
-  position: relative; }
-.component-cropsy .tinted .selection {
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  top: 0;
-  left: 0; }
-  .component-cropsy .tinted .selection svg {
-    fill: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%; }
+
+.notifications a {
+  color: #fff; }
 
 .component-cropsy {
   width: 100%;
