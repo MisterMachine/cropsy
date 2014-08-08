@@ -1,5 +1,55 @@
-<section>
-  <div class="container" id="main">
-    {{outlet}}
-  </div>
-</section>
+<div class="component-cropsy">
+  <!-- Outlet: Notification -->
+  <header class="notifications">
+    <div data-alert class="alert-box">
+      {{#link-to "index"}}Get started with {{Cropsy.applicationName}}{{/link-to}}
+      <a href="#" class="close">&times;</a>
+    </div>
+  </header>
+
+  <!-- Outlet: Stage -->
+  <section class="crop-stage">
+   <div class="image-original">
+     <figure class="original">
+        <img src="http://fillmurray.com/1280/920">
+     </figure>
+     <div class="selection">
+     </div>
+   </div>
+  </section>
+
+  <!-- Outlet: Results -->
+  <aside class="result-panel">
+    <figure class="result">
+      <img src="http://fillmurray.com/420/420">
+    </figure>
+
+    <fieldset>
+      <label>Height
+        {{input type="text" placeholder="px"}}
+      </label>
+
+      <label>Width
+        {{input type="text" placeholder="px"}}
+      </label>
+    </fieldset>
+
+    <button>Finish</button>
+  </aside>
+
+  <!-- Outlet: Toolbar -->
+  <footer class="toolbar">
+    <fieldset>
+      <button>Aspect Ratio</button>
+    </fieldset>
+
+    <fieldset>
+      <button>Zoom In</button>
+      <button>Zoom Out</button>
+    </fieldset>
+
+    <fieldset>
+      <button>Crop</button>
+    </fieldset>
+  </footer>
+</div>
