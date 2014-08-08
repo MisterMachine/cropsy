@@ -1,0 +1,17 @@
+<div class="image-canvas">
+  <figure>
+    <img {{bind-attr src="url"}} />
+  </figure>
+</div>
+
+<footer>
+  <button>Crop</button>
+</footer>
+
+<p>
+{{#each model.attributes}}
+{{this.key}}: {{this.value}}<br />
+{{/each}}
+</p>
+
+{{outlet}}
