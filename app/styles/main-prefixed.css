@@ -3112,9 +3112,9 @@ input[type="file"] {
 /* HTML5 Number spinners settings */
 /* We add basic fieldset styling */
 fieldset {
-  border: 1px solid #dddddd;
-  padding: 1.25rem;
-  margin: 1.125rem 0; }
+  border: 0 none #dddddd;
+  padding: 0;
+  margin: 0 0; }
   fieldset legend {
     font-weight: bold;
     background: white;
@@ -6072,6 +6072,9 @@ blockquote {
 .rhythm {
   margin-bottom: 1em; }
 
+.component-cropsy .result-panel .result {
+  margin-bottom: 1em; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?-ayumq4");
@@ -6180,7 +6183,75 @@ blockquote {
 .icon-star:before {
   content: "\e60a"; }
 
-.toolbar {
+.component-cropsy .crop-stage {
+  position: relative; }
+  .component-cropsy .crop-stage .selection {
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute; }
+    .component-cropsy .crop-stage .selection.ghost {
+      width: 50%;
+      height: 50%;
+      top: 0;
+      left: 0; }
+.component-cropsy .toolbar {
   padding: 1em 0; }
-  .toolbar button {
-    border-radius: 3px; }
+.component-cropsy .tinted .image-original {
+  position: relative; }
+.component-cropsy .tinted .selection {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0; }
+  .component-cropsy .tinted .selection svg {
+    fill: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%; }
+
+.component-cropsy {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 75rem; }
+  .component-cropsy:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media only screen and (min-width: 64.063em) {
+    .component-cropsy .crop-stage {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+      width: 66.66667%;
+      float: left; } }
+  @media only screen and (min-width: 64.063em) {
+    .component-cropsy .result-panel {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+      width: 33.33333%;
+      float: left; } }
+  @media only screen and (min-width: 64.063em) {
+    .component-cropsy .footer {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+      width: 100%;
+      float: left; } }
+  .component-cropsy .result-sizes {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 75rem; }
+    .component-cropsy .result-sizes:after {
+      content: "";
+      display: table;
+      clear: both; }
+    @media only screen and (min-width: 64.063em) {
+      .component-cropsy .result-sizes .dimension {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        width: 50%;
+        float: left; } }
