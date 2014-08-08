@@ -6396,7 +6396,8 @@ html, body {
     background: #000; } }
 .zoomer_basic {
   height: 300px;
-  width: 600px; }
+  width: 100%;
+  overflow: hidden; }
 
 .component-cropsy {
   width: 100%;
