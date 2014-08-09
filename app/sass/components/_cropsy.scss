@@ -41,9 +41,9 @@
   }
 
   .image-original {
+    @extend .gridded;
 
     .original {
-      box-shadow: inset 0px 3px 3px 0px rgba(50, 50, 50, 0.25);
       background-color: #efefef;
       width: 100%;
     }
@@ -83,7 +83,8 @@
 }
 
 .gridded {
-  background-image: url(/images/grid.png);
+  background: url(/images/grid.png);
+  box-shadow: inset 0px 3px 3px 0px rgba(50, 50, 50, 0.25);
 }
 
 .staged {
@@ -94,4 +95,8 @@
 
 .masked img {
   mask: url(/images/mask.svg);
+}
+
+.viewer {
+  @extend .gridded;
 }
