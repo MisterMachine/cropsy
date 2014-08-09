@@ -6373,6 +6373,9 @@ html, body {
   width: 100%;
   overflow: hidden; }
 
+.top-bar {
+  margin-bottom: 2em; }
+
 .component-cropsy {
   width: 100%;
   margin-left: auto;
