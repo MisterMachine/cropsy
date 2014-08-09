@@ -2,8 +2,9 @@
 
   .crop-stage {  
     position: relative;
+    cursor: crosshair;
 
-    // Overlay selectio
+    // Overlay selection
     .selection {
       background-color: rgba(#fff, .2);
       position: absolute;
@@ -14,6 +15,12 @@
 
         top: 0;
         left: 0;
+
+        &:hover {
+          border: 1px solid rgba(#fff, .2);
+          box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.3);
+          cursor: move;
+        }
       }
 
       &.tinted {
@@ -36,7 +43,9 @@
   .image-original {
 
     .original {
-
+      box-shadow: inset 0px 3px 3px 0px rgba(50, 50, 50, 0.25);
+      background-color: #efefef;
+      width: 100%;
     }
   }
 
@@ -55,4 +64,34 @@
   a {
     color: #fff;
   }
+}
+
+.luminated {
+  position: relative;
+
+  .original {
+    img {
+      opacity: .2;
+    }
+  }
+
+  .masked {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.gridded {
+  background-image: url(/images/grid.png);
+}
+
+.staged {
+  padding: 72% 0 0 0;
+  background-image: url(/images/grid.png);
+  margin-bottom: 2em;
+}
+
+.masked img {
+  mask: url(/images/mask.svg);
 }
