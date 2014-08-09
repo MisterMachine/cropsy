@@ -6,84 +6,84 @@ $h5-font-size: rem-calc(18);
 $h6-font-size: 1rem;
 
 %hN {
-	font-family: $sans-font-family;
-	text-rendering: optimizeLegibility; 
-	display: block;
-	font-weight: 600;
-	line-height: 1.125em;
-	margin: .5em 0;
+  font-family: $sans-font-family;
+  text-rendering: optimizeLegibility; 
+  display: block;
+  font-weight: 600;
+  line-height: 1.125em;
+  margin: .5em 0;
 }
 
 h1,
 .alpha {
-	@extend %hN;
-	font-size: $h1-font-size;
+  @extend %hN;
+  font-size: $h1-font-size;
 }
 
 h2,
 .beta {
-	@extend %hN;
-	font-size: $h2-font-size;
+  @extend %hN;
+  font-size: $h2-font-size;
 }
 
 h3,
 .gamma {
-	@extend %hN;
-	font-size: $h3-font-size;
+  @extend %hN;
+  font-size: $h3-font-size;
 }
 
 h4,
 .delta {
-	@extend %hN;
-	font-size: $h4-font-size;
+  @extend %hN;
+  font-size: $h4-font-size;
 }
 
 h5,
 .epsilon {
-	@extend %hN;
-	font-size: $h5-font-size;
+  @extend %hN;
+  font-size: $h5-font-size;
 }
 
 h6,
 .zeta {
-	@extend %hN;
-	font-size: $h6-font-size;
+  @extend %hN;
+  font-size: $h6-font-size;
 }
 
 p {
-	font-family: $font-family;
+  font-family: $font-family;
 }
 
 blockquote {
-	margin-bottom: 2em;
-	
-	p {
-		font-size: 2em;
-		line-height: 1.5em;
-		margin-bottom: 2em;
-	}
+  margin-bottom: 2em;
+  
+  p {
+    font-size: 2em;
+    line-height: 1.5em;
+    margin-bottom: 2em;
+  }
 }
 
 .serif {
-	font-family:$font-family;
+  font-family:$font-family;
 }
 
 .sans {
-	font-family:$sans-font-family;
+  font-family:$sans-font-family;
 }
 
 .normal {
-	font-weight: 300;
+  font-weight: 300;
 }
 
 .light {
-	font-weight: 100;
+  font-weight: 100;
 }
 
 .no-margin {
-	margin-bottom: .5em;
+  margin-bottom: .5em;
 }
 
 .rhythm {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
