@@ -2,15 +2,24 @@
   margin-bottom: 1em;
 }
 
-.dark {
+%dark {
   background-color: #333;
 }
 
-button i {
-  margin-left: -.75em;
-  margin-right: .5em;
+%inset {
+  box-shadow: inset 0px 3px 3px 0px rgba(50, 50, 50, 0.25);
 }
 
-.pattern {
-  @extend %rhythm;
+%gridded {
+  background: url(/images/grid.png);
+  box-shadow: inset 0px 3px 3px 0px rgba(50, 50, 50, 0.25);
 }
+
+%raised {
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+}
+
+%eased {
+  transition: background-color 300ms ease-out;
+}  

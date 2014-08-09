@@ -10,6 +10,7 @@
       position: absolute;
 
       &.ghost {
+        @extend %eased;
         width: 50%;
         height: 50%;
 
@@ -41,15 +42,21 @@
   }
 
   .image-original {
-    @extend .gridded;
+    @extend %gridded;
 
     .original {
+      @extend %inset;
       background-color: #efefef;
       width: 100%;
     }
   }
 
   .result-panel {
+    background: #efefef;
+    border-radius: 4px;
+    border: 1px solid rgba(#ccc, .5);
+    padding: 1em;
+
     .result {
       @extend %rhythm;
     }
@@ -82,11 +89,6 @@
   }
 }
 
-.gridded {
-  background: url(/images/grid.png);
-  box-shadow: inset 0px 3px 3px 0px rgba(50, 50, 50, 0.25);
-}
-
 .staged {
   padding: 72% 0 0 0;
   background-image: url(/images/grid.png);
@@ -98,5 +100,30 @@
 }
 
 .viewer {
-  @extend .gridded;
+  @extend %gridded;
+}
+
+.pattern {
+  @extend %rhythm;
+}
+
+button {
+  @extend %raised;
+
+  i {
+    margin-left: -.75em;
+    margin-right: .5em;
+  }
+}
+
+.icon-bar {
+  @extend %raised;
+  border-color: #000;
+  border-style: solid;
+  border-radius: 4px;
+
+  > *:hover {
+    background: #000;
+    @extend %eased;
+  }
 }
