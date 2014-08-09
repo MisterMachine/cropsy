@@ -22,4 +22,38 @@
 
 %eased {
   transition: background-color 300ms ease-out;
+}
+
+%module {
+  background: #efefef;
+  border-radius: 4px;
+  border: 1px solid rgba(#ccc, .5);
+}
+
+%icon-button {
+  i {
+    @media #{$medium-up} {
+      margin-left: -.75em;
+      margin-right: .5em;
+    }  
+  }
+
+  .name {
+    display: none;
+    font-size: 100%;
+
+    @media #{$medium-up} {
+      display: inline-block;
+    }  
+  }
 }  
+
+%masked {
+  mask: url(/images/mask.svg);
+}
+
+button {
+  @extend %raised;
+  @extend %icon-button;
+}  
+
