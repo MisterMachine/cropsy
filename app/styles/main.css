@@ -6077,6 +6077,13 @@ blockquote {
 .component-cropsy .result-panel .result {
   margin-bottom: 1em; }
 
+.dark {
+  background-color: #333; }
+
+button i {
+  margin-left: -.75em;
+  margin-right: .5em; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?-esmz6l");
@@ -6365,6 +6372,9 @@ html, body {
   height: 300px;
   width: 100%;
   overflow: hidden; }
+
+.top-bar {
+  margin-bottom: 2em; }
 
 .component-cropsy {
   width: 100%;

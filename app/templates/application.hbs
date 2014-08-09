@@ -1,3 +1,5 @@
+{{outlet}}
+
 <div class="component-cropsy">
   <!-- Outlet: Notification -->
   <header class="notifications">
@@ -6,8 +8,6 @@
       <a {{action 'closeNotification' this }} class="close">&times;</a>
     </div>
   </header>
-
-  {{outlet}}
 
   <!-- Outlet: Stage -->
   <section class="crop-stage">
@@ -44,29 +44,38 @@
       </label>
     </fieldset>
 
-    <button class="radius" {{action 'finishCropping' this }}><i class="icon-checkmark"></i> Finish</button>
+    <button class="secondary radius" {{action 'finishCropping' this }}><i class="icon-close"></i> Cancel</button>
+    <button class="success radius" {{action 'finishCropping' this }}><i class="icon-checkmark"></i> Finish</button>
   </aside>
 
   <!-- Outlet: Toolbar -->
   <footer>
     <fieldset class="toolbar">
       <div class="tool-aspect">
-        <button class="radius" {{action 'setAspectRatio' this }}><i class="icon-image"></i> Aspect Ratio</button>
+        <button class="warning radius" {{action 'setAspectRatio' this }}><i class="icon-image"></i> Aspect Ratio</button>
       </div>
 
       <ul class="tool-zoom button-group radius">
-        <li><button {{action 'zoomIn' this }}><i class="icon-plus"></i> Zoom In</button></li>
-        <li><button {{action 'zoomOut' this }}><i class="icon-minus"></i> Zoom Out</button></li>
+        <li><button class="dark" {{action 'zoomIn' this }}><i class="icon-plus"></i> Zoom In</button></li>
+        <li><button class="dark" {{action 'zoomOut' this }}><i class="icon-minus"></i> Zoom Out</button></li>
       </ul>
 
       <div class="tool-crop">
-        <button class="radius" {{action 'cropImage' this }}><i class="icon-crop"></i> Crop</button>
+        <button class="success radius" {{action 'cropImage' this }}><i class="icon-crop"></i> Crop</button>
       </div>
     </fieldset> 
   </footer>
 </div>
 
 <section class="row">
+  <h3>Zoomer</h3>
+  <div class="zoomer_wrapper zoomer_basic">
+    <img src="/images/nasa-bw-1.jpg">
+  </div>
+</section>
+
+<section class="row">
+  <h3>Toolbar</h3>
   <div class="icon-bar five-up">
     <a class="item">
       <i class="icon-wrench"></i>
