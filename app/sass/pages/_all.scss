@@ -5,7 +5,7 @@
 .component-cropsy.layout {
   @include grid-row();
 
-  .crop-stage, .img-container {
+  .crop-stage {
       @media #{$large-up} {
           @include grid-column(8);
       }

@@ -149,14 +149,52 @@
 <section class="pattern component-cropsy layout row">
   <!-- Outlet: Stage -->
   <h3>Cropper</h3>
+  <section class="crop-stage">
     <div class="img-container">
     <img src="/images/nasa-bw-1.jpg">
     </div>
+  </section>
 
-    <div class="result-panel">
-      <div class="result-preview">
-        <div class="img-preview"></div>
-      </div>
+
+  <aside class="result-panel">
+    <div class="result-preview">
+      <div class="img-preview"></div>
     </div>
+    <div class="panel callout">
+      <fieldset class="result-sizes">
+        <label class="dimension">Height
+          {{input type="text" placeholder="px"}}
+        </label>
+
+        <label class="dimension">Width
+          {{input type="text" placeholder="px"}}
+        </label>
+      </fieldset>
+    </div>
+  </aside>
+</section>
+
+<section class="pattern row">
+  <div class="icon-bar five-up">
+    <a class="item">
+      <i class="icon-wrench"></i>
+      <label>Edit</label>
+    </a>
+    <a class="item">
+      <i class="icon-checkbox-partial"></i>
+      <label>Aspect</label>
+    </a>
+    <a class="item">
+      <i class="icon-zoomin"></i>
+      <label>Zoom In</label>
+    </a>
+    <a class="item">
+      <i class="icon-zoomout"></i>
+      <label>Zoom Out</label>
+    </a>
+    <a class="item">
+      <i class="icon-crop"></i>
+      <label>Crop</label>
+    </a>
   </div>
 </section>
