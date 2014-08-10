@@ -12,11 +12,11 @@
     <ul class="right">
       <li class="active"><a href="#" {{action 'addImage' this }}>Add Image</a></li>
       <li class="has-dropdown">
-        <a href="#">Pages</a>
-        <ul class="dropdown">
-          {{#each image in model}}
-          <li>{{#link-to 'image' image}}{{image.title}}{{/link-to}}</li>
-          {{/each}}
+        <a href="#" data-dropdown="menuPages">Pages</a>
+        <ul id="menuPages" class="dropdown">
+          <li><a href="#">This is a link</a></li>
+          <li><a href="#">This is another</a></li>
+          <li><a href="#">Yet another</a></li>
         </ul>
       </li>
     </ul>
