@@ -10,3 +10,7 @@ button i {
   margin-left: -.75em;
   margin-right: .5em;
 }
+
+.pattern {
+  @extend %rhythm;
+}

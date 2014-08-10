@@ -6074,7 +6074,7 @@ blockquote {
 .rhythm {
   margin-bottom: 1em; }
 
-.component-cropsy .result-panel .result {
+.pattern, .component-cropsy .result-panel .result {
   margin-bottom: 1em; }
 
 .dark {
@@ -6160,7 +6160,8 @@ button i {
   content: "\e612"; }
 
 .component-cropsy .crop-stage {
-  position: relative; }
+  position: relative;
+  cursor: crosshair; }
   .component-cropsy .crop-stage .selection {
     background-color: rgba(255, 255, 255, 0.2);
     position: absolute; }
@@ -6169,6 +6170,10 @@ button i {
       height: 50%;
       top: 0;
       left: 0; }
+      .component-cropsy .crop-stage .selection.ghost:hover {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.3);
+        cursor: move; }
     .component-cropsy .crop-stage .selection.tinted {
       background-color: transparent;
       width: 100%;
@@ -6180,11 +6185,35 @@ button i {
         fill: rgba(0, 0, 0, 0.6);
         width: 100%;
         height: 100%; }
+.component-cropsy .image-original .original {
+  box-shadow: inset 0px 3px 3px 0px rgba(50, 50, 50, 0.25);
+  background-color: #efefef;
+  width: 100%; }
 .component-cropsy .toolbar {
   padding: 1em 0; }
 
 .notifications a {
   color: #fff; }
+
+.luminated {
+  position: relative; }
+  .luminated .original img {
+    opacity: .2; }
+  .luminated .masked {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.gridded {
+  background-image: url(/images/grid.png); }
+
+.staged {
+  padding: 72% 0 0 0;
+  background-image: url(/images/grid.png);
+  margin-bottom: 2em; }
+
+.masked img {
+  mask: url(/images/mask.svg); }
 
 /* 
  * Zoomer v3.0.12 - 2014-07-28 
@@ -6376,48 +6405,48 @@ html, body {
 .top-bar {
   margin-bottom: 2em; }
 
-.component-cropsy {
+.component-cropsy.layout {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
   max-width: 75rem; }
-  .component-cropsy:after {
+  .component-cropsy.layout:after {
     content: "";
     display: table;
     clear: both; }
   @media only screen and (min-width: 64.063em) {
-    .component-cropsy .crop-stage {
+    .component-cropsy.layout .crop-stage {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem;
       width: 66.66667%;
       float: left; } }
   @media only screen and (min-width: 64.063em) {
-    .component-cropsy .result-panel {
+    .component-cropsy.layout .result-panel {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem;
       width: 33.33333%;
       float: left; } }
   @media only screen and (min-width: 64.063em) {
-    .component-cropsy .footer {
+    .component-cropsy.layout .footer {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem;
       width: 100%;
       float: left; } }
-  .component-cropsy .result-sizes {
+  .component-cropsy.layout .result-sizes {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
     max-width: 75rem; }
-    .component-cropsy .result-sizes:after {
+    .component-cropsy.layout .result-sizes:after {
       content: "";
       display: table;
       clear: both; }
     @media only screen and (min-width: 64.063em) {
-      .component-cropsy .result-sizes .dimension {
+      .component-cropsy.layout .result-sizes .dimension {
         padding-left: 0.9375rem;
         padding-right: 0.9375rem;
         width: 50%;

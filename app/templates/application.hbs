@@ -1,6 +1,6 @@
 {{outlet}}
 
-<div class="component-cropsy">
+<div class="component-cropsy layout">
 
   <!-- Outlet: Notification -->
   <header class="notifications">
@@ -23,10 +23,11 @@
 
       <div class="selection tinted">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1280 920" enable-background="new 0 0 1280 920" xml:space="preserve">
-          <path d="M0,0v920h1280V0H0z M1073.8,893.8H206.2V26.2h867.6V893.8z"/>
+
+        <path d="M0,0v920h1280V0H0z M1073.8,893.8H206.2V26.2h867.6V893.8z"/>
         </svg>
       </div>
-
+    </div>
   </section>
 
   <!-- Outlet: Results -->
@@ -57,8 +58,8 @@
       </div>
 
       <ul class="tool-zoom button-group radius">
-        <li><button class="dark" {{action 'zoomIn' this }}><i class="icon-plus"></i> Zoom In</button></li>
-        <li><button class="dark" {{action 'zoomOut' this }}><i class="icon-minus"></i> Zoom Out</button></li>
+        <li><button class="dark zoom-in" {{action 'zoomIn' this }}><i class="icon-plus"></i> Zoom In</button></li>
+        <li><button class="dark zoom-out" {{action 'zoomOut' this }}><i class="icon-minus"></i> Zoom Out</button></li>
       </ul>
 
       <div class="tool-crop">
@@ -68,14 +69,14 @@
   </footer>
 </div>
 
-<section class="row">
+<section class="pattern row">
   <h3>Zoomer</h3>
   <div class="zoomer_wrapper zoomer_basic">
     <img src="/images/nasa-bw-1.jpg">
   </div>
 </section>
 
-<section class="row">
+<section class="pattern row">
   <h3>Toolbar</h3>
   <div class="icon-bar five-up">
     <a class="item">
@@ -100,3 +101,35 @@
     </a>
   </div>
 </section>
+
+<section class="pattern component-cropsy row">
+  <!-- Outlet: Stage -->
+  <h3>Stage w/ Ghost</h3>
+  <div class="crop-stage">
+    <div class="image-original">
+      <figure class="original staged">
+         {{!--  <img src="http://fillmurray.com/1280/920"> --}}
+      </figure>
+    
+      <div class="selection ghost">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="pattern component-cropsy row">
+  <!-- Outlet: Stage -->
+  <h3>Stage w/ Mask</h3>
+  <div class="crop-stage">
+    <div class="image-original luminated">
+      <figure class="original gridded">
+        <img src="http://fillmurray.com/1280/920">
+      </figure>
+
+      <div class="selection masked">
+        <img src="http://fillmurray.com/1280/920">
+      </div>
+    </div>
+  </div>
+</section>  
