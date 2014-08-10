@@ -6,7 +6,8 @@
     "ember-data": "1.0.0-beta.7",
     "foundation": "zurb/bower-foundation",
     "handlebars": "1.2.1",
-    "bourbon": "~4.0.2"
+    "bourbon": "~4.0.2",
+    "cropper": "*"
   },
   "devDependencies": {
     "ember-mocha-adapter": "0.1.2"

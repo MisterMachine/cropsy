@@ -10,11 +10,11 @@
       position: absolute;
 
       &.ghost {
-        width: 50%;
-        height: 50%;
-
-        top: 0;
+        @extend %eased;
         left: 0;
+        height: 50%;
+        top: 0;
+        width: 50%;
 
         &:hover {
           border: 1px solid rgba(#fff, .2);
@@ -22,41 +22,65 @@
           cursor: move;
         }
       }
-
-      &.tinted {
-        background-color: transparent;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-
-        svg {
-          fill: rgba(#000, .6);
-          width: 100%;
-          height: 100%;
-        }
-      }  
     }
   }
 
   .image-original {
+    @extend %gridded;
 
     .original {
-      box-shadow: inset 0px 3px 3px 0px rgba(50, 50, 50, 0.25);
+      @extend %inset;
       background-color: #efefef;
       width: 100%;
+    }
+
+    // Tinted selection
+    &.luminated {
+      position: relative;
+
+      .original {
+        img {
+          opacity: .2;
+        }
+      }
+
+      .masked {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
   }
 
   .result-panel {
+    @extend %rhythm;
+
     .result {
       @extend %rhythm;
     }
   }
 
   .toolbar {
-    padding: 1em 0;
+    @extend %module;
+    padding: 1em;
+
+    [class^="tool-"], [class*=" tool-"] {
+      float: left;
+      margin-right: 1em;
+
+      &:last-child {
+        float: right;
+        margin-right: 0;
+      }
+
+      button {
+        margin-bottom: 0;
+      }  
+    }
+
+    .tool-zoom button {
+      border-color: #0078a0;
+    }
   }
 }
 
@@ -66,32 +90,74 @@
   }
 }
 
-.luminated {
-  position: relative;
+.icon-bar {
+  @extend %raised;
+  border-color: #000;
+  border-style: solid;
+  border-radius: 4px;
 
-  .original {
-    img {
-      opacity: .2;
-    }
+  > *:hover {
+    background: #000;
+    @extend %eased;
   }
 
-  .masked {
-    position: absolute;
-    top: 0;
-    left: 0;
+  label {
+    display: none;
+    @media #{$medium-up} {
+      display: block;
+    }  
   }
-}
-
-.gridded {
-  background-image: url(/images/grid.png);
 }
 
 .staged {
+  @extend %gridded;
   padding: 72% 0 0 0;
-  background-image: url(/images/grid.png);
-  margin-bottom: 2em;
 }
 
 .masked img {
-  mask: url(/images/mask.svg);
+  @extend %masked;
+}
+
+.viewer {
+  @extend %gridded;
+}
+
+.pattern {
+  @extend %rhythm;
+}
+
+.crop-stage {
+  @extend %gridded;
+
+  .img-container {
+    max-height: 500px;
+    overflow: hidden;
+  }
+}
+
+.result-panel {
+  position: relative;
+  @include clearfix;
+
+  .result-preview {
+    @extend %inset;
+    @extend %rhythm;
+    height: 0;
+    overflow: hidden;
+    padding: 72% 0 0 0;
+    position: relative;
+    width: 100%;
+    
+    .img-preview {
+      height: 100%;
+      opacity: .5;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      img {
+        max-width: none;
+      }
+    }
+  }
 }

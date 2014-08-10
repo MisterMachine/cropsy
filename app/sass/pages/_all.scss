@@ -3,33 +3,34 @@
 }
 
 .component-cropsy.layout {
+  @include grid-row();
+
+  .crop-stage {
+      @media #{$large-up} {
+          @include grid-column(8);
+      }
+  }
+
+  .result-panel {
+
+      @media #{$large-up} {
+          @include grid-column(4);
+      }
+  }
+
+  .footer {
+    @media #{$large-up} {
+        @include grid-column(12);
+    }
+  }
+
+  .result-sizes {
     @include grid-row();
 
-    .crop-stage {
-        @media #{$large-up} {
-            @include grid-column(8);
-        }
-    }
-
-    .result-panel {
-        @media #{$large-up} {
-            @include grid-column(4);
-        }
-    }
-
-    .footer {
+    .dimension {
       @media #{$large-up} {
-          @include grid-column(12);
+          @include grid-column(6);
       }
     }
-
-    .result-sizes {
-      @include grid-row();
-
-      .dimension {
-        @media #{$large-up} {
-            @include grid-column(6);
-        }
-      }
-    }
+  }
 }

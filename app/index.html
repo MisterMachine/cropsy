@@ -16,7 +16,10 @@
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/handlebars/handlebars.runtime.js"></script>
         <script src="bower_components/foundation/js/foundation.min.js"></script>
+        <!--script src="bower_components/hammerjs/hammer.js"></script-->
+        <script src="bower_components/jquery-cropbox/jquery.cropbox.js"></script>
         <script src="bower_components/zoomer/jquery.fs.zoomer.js"></script>
+        <script src="bower_components/cropper/dist/cropper.js"></script>
         <script src="@@ember"></script>
         <script src="@@ember_data"></script>
         <!-- endbuild -->
@@ -28,16 +31,6 @@
         <!-- build:js(.tmp) scripts/main.js -->
         <script src="scripts/combined-scripts.js"></script>
         <!-- endbuild -->
-
-        <script>
-            $(document).ready(function() {
-                $(".zoomer_basic").zoomer();
-
-                $(window).on("resize", function(e) {
-                    $(".zoomer_wrapper").zoomer("resize");
-                });
-            });
-        </script>
 
     </body>
 </html>
