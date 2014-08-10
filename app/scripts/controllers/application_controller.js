@@ -1,5 +1,7 @@
 Cropsy.ApplicationController = Ember.ObjectController.extend({
 
+  applicationName: "Cropsy",
+
   actions: {
 
     closeNotification: function(image) {

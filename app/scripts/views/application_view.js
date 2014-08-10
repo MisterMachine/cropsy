@@ -13,16 +13,16 @@ Cropsy.ApplicationView = Ember.View.extend({
       $(".viewer").zoomer("resize");
     });
 
-    $('.crop').cropbox({width: 600, height: 250})
-    .on('cropbox', function (e, result) {
-        console.log(result);
-    });
+    // $('.crop').cropbox( {width: 600, height: 250} )
+    // .on('cropbox', function (e, result) {
+    //     console.log(result);
+    // });
 
     var $image = $(".img-container img"),
-    $dataX = $("#data-x"),
-    $dataY = $("#data-y"),
-    $dataHeight = $("#data-height"),
-    $dataWidth = $("#data-width");
+      $dataX = $("#data-x"),
+      $dataY = $("#data-y"),
+      $dataHeight = $("#data-height"),
+      $dataWidth = $("#data-width");
 
     $image.cropper({
         aspectRatio: 16 / 9,

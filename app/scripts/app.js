@@ -3,8 +3,6 @@ var Cropsy = window.Cropsy = Ember.Application.create({
   LOG_ACTIVE_GENERATION: true
 });
 
-Cropsy.applicationName = "Cropsy";
-
 /* Order and include as you please. */
 require('scripts/controllers/*');
 require('scripts/store');

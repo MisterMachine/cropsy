@@ -1,3 +1,28 @@
+<nav class="top-bar index-panel" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1>{{#link-to "index"}}{{applicationName}}{{/link-to}}</h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="#" {{action 'addImage' this }}>Add Image</a></li>
+      <li class="has-dropdown">
+        <a href="#">Pages</a>
+        <ul class="dropdown">
+          {{#each image in model}}
+          <li>{{#link-to 'image' image}}{{image.title}}{{/link-to}}</li>
+          {{/each}}
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav>
+
 {{outlet}}
 
 <div class="component-cropsy layout">
