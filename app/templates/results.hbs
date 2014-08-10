@@ -1,0 +1,18 @@
+<aside class="result-panel">
+  <figure class="result">
+    <img src="http://fillmurray.com/420/420">
+  </figure>
+
+  <fieldset class="result-sizes">
+    <label class="dimension">Height
+      {{input type="text" placeholder="px"}}
+    </label>
+
+    <label class="dimension">Width
+      {{input type="text" placeholder="px"}}
+    </label>
+  </fieldset>
+
+  <button class="secondary radius" {{action 'cancel' this }}><i class="icon-close"></i>Cancel</button>
+  <button class="success radius" {{action 'finish' this }}><i class="icon-checkmark"></i>Finish</button>
+</aside>

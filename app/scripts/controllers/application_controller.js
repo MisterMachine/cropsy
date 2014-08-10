@@ -8,14 +8,6 @@ Cropsy.ApplicationController = Ember.ObjectController.extend({
       console.log('close notification');
     },
 
-    finishCropping: function(image) {
-      console.log('finished cropping');
-
-      // example of toggling class on button click
-      //$('.result').toggleClass('active');
-
-    },
-
     setAspectRatio: function(image) {
       console.log('set aspect ratio');
     },
@@ -26,11 +18,8 @@ Cropsy.ApplicationController = Ember.ObjectController.extend({
 
     zoomOut: function(image) {
       console.log('zoom out');
-    },
-
-    cropImage: function(image) {
-      console.log('crop image');
     }
+
 
   }
 
