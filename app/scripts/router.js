@@ -13,10 +13,9 @@ Cropsy.Router.map(function () {
 
   this.resource('toolbar');
 
-  this.resource('results', function(){
-    this.resource('image', { path: '/:image_id' } );
+  this.resource('results', {
+    path: 'results/:image_id'
   });
-
 
   this.resource('notifications');
   

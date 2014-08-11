@@ -5,7 +5,7 @@ Cropsy.ImageController = Ember.ObjectController.extend({
     cropImage: function(image) {
       console.log('crop image');
 
-      this.transitionToRoute('images')
+      this.transitionToRoute('images');
 
     }
 

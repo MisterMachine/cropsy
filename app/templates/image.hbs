@@ -1,33 +1,43 @@
-<div class="image-canvas">
-  {{#if model.url}}
-  <figure>
-    <img {{bind-attr src="model.url"}} />
-  </figure>
-  {{else}}
-  <figure>
-    <p>We're having trouble finding your image.</p>
-  </figure>
-  {{/if}}
-</div>
+<section class="crop-stage">
+
+  <div class="image-original zoomer_wrapper viewer" style="height:500px">
+    {{#if model.url}}
+    <figure class="original">
+      <img {{bind-attr src="model.url"}}>
+    </figure>
+    {{else}}
+    <figure>
+      <p>We're having trouble finding your image.</p>
+    </figure>
+    {{/if}}
+
+    {{!    
+    <div class="selection ghost">
+    </div>
+    <div class="selection tinted">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1280 920" enable-background="new 0 0 1280 920" xml:space="preserve">
+      <path d="M0,0v920h1280V0H0z M1073.8,893.8H206.2V26.2h867.6V893.8z"/>
+      </svg>
+    </div>
+    }}
+
+  </div>
+</section>
 
 <footer>
   <fieldset class="toolbar">
     <div class="tool-aspect">
-      <button class="warning radius" {{action 'setAspectRatio' this }} data-dropdown="drop1"><i class="icon-image"></i> <span class="name"> Aspect Ratio</span></button>
-      {{!-- 
-      <ul id="drop1" class="f-dropdown open" data-options="align:top" data-dropdown="drop" style="display: block; left: 0;">
+      <button class="warning radius" data-dropdown="menu-aspect-ratios"><i class="icon-image"></i> <span class="name"> Aspect Ratio</span></button>
+      <ul id="menu-aspect-ratios" class="f-dropdown open" data-options="align:top" data-dropdown="drop" style="display: block; left: 0;">
         <li><a href="#">Square</a></li>
         <li><a href="#">3x2</a></li>
         <li><a href="#">16x9</a></li>
       </ul>
-      --}}
     </div>
-
     <ul class="tool-zoom button-group radius">
       <li><button class="dark zoom-in" {{action 'zoomIn' this }}><i class="icon-plus"></i><span class="name"> Zoom In</span></button></li>
       <li><button class="dark zoom-out" {{action 'zoomOut' this }}><i class="icon-minus"></i> <span class="name"> Zoom Out</span></button></li>
     </ul>
-
     <div class="tool-crop">
       <button class="success radius" {{action 'cropImage' this }}><i class="icon-crop"></i> <span class="name">Crop</span> </button>
     </div>

@@ -4,6 +4,10 @@ Cropsy.ApplicationController = Ember.ObjectController.extend({
 
   actions: {
 
+    addImage: function() {
+      this.transitionToRoute('index');
+    },
+
     closeNotification: function(image) {
       console.log('close notification');
     },

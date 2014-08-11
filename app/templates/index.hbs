@@ -1,8 +1,18 @@
-<section class="row index-panel">
-  <dl class="sub-nav">
-  <dt>Pages</dt>
-  {{#each image in model}}
-  <dd>{{#link-to 'image' image}}{{image.title}}{{/link-to}}</dd>
-  {{/each}}
-  </dl>
-</section>
+<div class="component-cropsy layout">
+
+  <header class="notifications">
+    <div data-alert class="alert-box">
+      Select an image to get started with Cropsy
+      <a {{action 'closeNotification' this }} class="close">&times;</a>
+    </div>
+  </header>
+
+  <section class="row index-panel">
+    <dl class="sub-nav">
+    {{#each image in model}}
+    <dd>{{#link-to 'image' image}}{{image.title}}{{/link-to}}</dd>
+    {{/each}}
+    </dl>
+  </section>
+
+</div>
