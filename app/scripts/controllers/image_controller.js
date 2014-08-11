@@ -2,10 +2,22 @@ Cropsy.ImageController = Ember.ObjectController.extend({
 
   actions: {
 
-    cropImage: function(image) {
-      console.log('crop image');
+    setAspectRatio: function(image) {
+      console.log('set aspect ratio');
+    },
 
-      this.transitionToRoute('images');
+    zoomIn: function(image) {
+      console.log('zoom in');
+    },
+
+    zoomOut: function(image) {
+      console.log('zoom out');
+    },
+
+    cropImage: function(image) {
+      console.log(image.id);
+
+      this.transitionToRoute('results', image.id);
 
     }
 

@@ -8,11 +8,11 @@ Cropsy.ResultsController = Ember.ObjectController.extend({
   actions: {
 
     cancel: function(image) {
-      console.log('finished cropping');
+      this.transitionToRoute('images', image.id);
     },
 
     finish: function(image) {
-      console.log('finished cropping');
+      this.transitionToRoute('index');
     }
 
   }
