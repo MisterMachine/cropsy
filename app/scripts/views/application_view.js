@@ -25,10 +25,11 @@ Cropsy.ApplicationView = Ember.View.extend({
       $dataX = $("#data-x"),
       $dataY = $("#data-y"),
       $dataHeight = $("#data-height"),
-      $dataWidth = $("#data-width");
+      $dataWidth = $("#data-width")
 
     $image.cropper({
         aspectRatio: 16 / 9,
+        dragCrop: false,
         data: {
             x: 480,
             y: 60,
@@ -48,10 +49,17 @@ Cropsy.ApplicationView = Ember.View.extend({
         $image.cropper("reset");
     });
 
-    $("#free-ratio").click(function() {
-        $image.cropper("setAspectRatio", "auto");
+    $("#16-9-ratio").click(function() {
+        $image.cropper("setAspectRatio", "1.778");
     });
 
+    $("#3-2-ratio").click(function() {
+        $image.cropper("setAspectRatio", "1.5");
+    });
+
+    $("#1-1-ratio").click(function() {
+        $image.cropper("setAspectRatio", "1");
+    });
   }  
 
 });
