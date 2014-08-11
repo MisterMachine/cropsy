@@ -1,17 +1,17 @@
-.top-bar {
-  margin-bottom: 2em;
-}
-
 .component-cropsy.layout {
+  margin-top: 1em;
   @include grid-row();
 
   .crop-stage {
+    @include grid-column(12);
+
       @media #{$large-up} {
           @include grid-column(8);
       }
   }
 
   .result-panel {
+    @include grid-column(12);
 
       @media #{$large-up} {
           @include grid-column(4);
@@ -19,18 +19,23 @@
   }
 
   .footer {
-    @media #{$large-up} {
-        @include grid-column(12);
-    }
+    @include grid-column(12);
   }
 
   .result-sizes {
     @include grid-row();
 
     .dimension {
+      @include grid-column(12);
+      
       @media #{$large-up} {
           @include grid-column(6);
       }
     }
+  }
+
+  .tools {
+    @include grid-row();
+    padding: 0 .5em;
   }
 }

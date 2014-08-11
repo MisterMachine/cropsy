@@ -2,27 +2,7 @@
 
   .crop-stage {  
     position: relative;
-    cursor: crosshair;
-
-    // Overlay selection
-    .selection {
-      background-color: rgba(#fff, .2);
-      position: absolute;
-
-      &.ghost {
-        @extend %eased;
-        left: 0;
-        height: 50%;
-        top: 0;
-        width: 50%;
-
-        &:hover {
-          border: 1px solid rgba(#fff, .2);
-          box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.3);
-          cursor: move;
-        }
-      }
-    }
+    overflow: hidden;
   }
 
   .image-original {
@@ -32,23 +12,6 @@
       @extend %inset;
       background-color: #efefef;
       width: 100%;
-    }
-
-    // Tinted selection
-    &.luminated {
-      position: relative;
-
-      .original {
-        img {
-          opacity: .2;
-        }
-      }
-
-      .masked {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
     }
   }
 
@@ -84,6 +47,11 @@
   }
 }
 
+.top-bar {
+  z-index: 100;
+  position: relative;
+}
+
 .notifications {
   a {
     color: #fff;
@@ -95,6 +63,8 @@
   border-color: #000;
   border-style: solid;
   border-radius: 4px;
+  z-index: 100;
+  position: relative;
 
   > *:hover {
     background: #000;
@@ -130,8 +100,11 @@
   @extend %gridded;
 
   .img-container {
-    max-height: 500px;
     overflow: hidden;
+
+    @media #{$large-up} {
+      max-height: 500px;
+    }
   }
 
   .cropper-container > img {
@@ -198,5 +171,21 @@
         max-width: none;
       }
     }
+  }
+}
+
+.prototype {
+  height: 100%;
+
+  .crop-stage {
+    margin-bottom: 1em;
+  }
+
+  .panel.callout {
+    display: none;
+  }
+
+  .result-panel {
+    display: none;
   }
 }
