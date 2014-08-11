@@ -11,8 +11,6 @@ Cropsy.PatternsView = Ember.View.extend({
       $dataHeight = $("#data-height"),
       $dataWidth = $("#data-width")
 
-console.log($image);
-
     $image.cropper({
         aspectRatio: 16 / 9,
         dragCrop: false,
