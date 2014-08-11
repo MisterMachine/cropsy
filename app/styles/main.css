@@ -6275,6 +6275,19 @@ button .name {
   overflow: hidden; }
 .crop-stage .cropper-container > img {
   filter: blur(3px); }
+.crop-stage .cropper-viewer {
+  outline-color: #fff; }
+.crop-stage .cropper-point {
+  display: none; }
+  .crop-stage .cropper-point.point-se {
+    display: block;
+    height: 1em;
+    width: 1em; }
+.crop-stage .cropper-line {
+  background-color: #000;
+  height: 7px; }
+.crop-stage .cropper-dashed {
+  border-style: solid; }
 
 .result-panel {
   position: relative; }
@@ -6285,9 +6298,15 @@ button .name {
   .result-panel .result-preview {
     height: 0;
     overflow: hidden;
-    padding: 72% 0 0 0;
+    padding: 55% 0 0 0;
     position: relative;
     width: 100%; }
+    .result-panel .result-preview.threextwo {
+      padding: 55% 0 0 0; }
+    .result-panel .result-preview.threextwo {
+      padding: 75% 0 0 0; }
+    .result-panel .result-preview.square {
+      padding: 100% 0 0 0; }
     .result-panel .result-preview .img-preview {
       height: 100%;
       opacity: .5;

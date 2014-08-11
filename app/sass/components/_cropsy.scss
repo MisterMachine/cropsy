@@ -137,6 +137,29 @@
   .cropper-container > img {
     filter: blur(3px);
   }
+
+  .cropper-viewer {
+    outline-color: #fff;
+  }
+
+  .cropper-point {
+    display: none;
+
+    &.point-se {
+      display: block;
+      height: 1em;
+      width: 1em;
+    }
+  }
+
+  .cropper-line {
+    background-color: #000;
+    height: 7px;
+  }
+
+  .cropper-dashed {
+    border-style: solid;
+  }
 }
 
 .result-panel {
@@ -148,10 +171,22 @@
     @extend %rhythm;
     height: 0;
     overflow: hidden;
-    padding: 72% 0 0 0;
+    padding: 55% 0 0 0;
     position: relative;
     width: 100%;
-    
+
+    &.threextwo {
+      padding: 55% 0 0 0;
+    }
+
+    &.threextwo {
+      padding: 75% 0 0 0;
+    }
+
+    &.square {
+      padding: 100% 0 0 0;
+    }
+
     .img-preview {
       height: 100%;
       opacity: .5;

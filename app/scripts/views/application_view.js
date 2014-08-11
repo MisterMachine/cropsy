@@ -51,15 +51,25 @@ Cropsy.ApplicationView = Ember.View.extend({
 
     $("#16-9-ratio").click(function() {
         $image.cropper("setAspectRatio", "1.778");
+        $("#results-ratio")
+        .removeClass("threextwo square")
+        .addClass("sixteenxnine");
     });
 
     $("#3-2-ratio").click(function() {
         $image.cropper("setAspectRatio", "1.5");
+        $("#results-ratio")
+        .removeClass("sixteenxnine square")
+        .addClass("threextwo");
     });
 
     $("#1-1-ratio").click(function() {
         $image.cropper("setAspectRatio", "1");
+        $("#results-ratio")
+        .removeClass("sixteenxnine threextwo")
+        .addClass("square");
     });
+
   }  
 
 });
