@@ -1,20 +1,34 @@
-<section class="crop-stage">
+<section class="pattern component-cropsy layout row">
 
-  <div class="image-original zoomer_wrapper viewer" style="height:500px">
-    {{#if model.url}}
-    <figure class="original">
-      <img {{bind-attr src="model.url"}}>
-    </figure>
-    {{else}}
-    <figure>
-      <p>We're having trouble finding your image.</p>
-    </figure>
-    {{/if}}
+  <section class="crop-stage">
+    <div class="image-container">
+      {{#if model.url}}
+        <img {{bind-attr src="model.url"}}>
+      {{else}}
+        <p>We're having trouble finding your image.</p>
+      {{/if}}
+    </div>
 
-  </div>
+  </section>
+
+  <aside class="result-panel">
+    <div class="result-preview">
+      <div class="img-preview"></div>
+    </div>
+    <div class="panel callout">
+      <fieldset class="result-sizes">
+        <label class="dimension">Height
+          {{input type="text" placeholder="px"}}
+        </label>
+
+        <label class="dimension">Width
+          {{input type="text" placeholder="px"}}
+        </label>
+      </fieldset>
+    </div>
+  </aside>
 
   <button class="radius" {{action 'edit' this}}>Edit</button>
   {{outlet}}
 
 </section>
-
