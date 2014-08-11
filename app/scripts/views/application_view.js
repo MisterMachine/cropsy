@@ -21,7 +21,7 @@ Cropsy.ApplicationView = Ember.View.extend({
         console.log(result);
     });
 
-    var $image = $(".img-container img"),
+    var $image = $(".pattern .img-container img"),
       $dataX = $("#data-x"),
       $dataY = $("#data-y"),
       $dataHeight = $("#data-height"),

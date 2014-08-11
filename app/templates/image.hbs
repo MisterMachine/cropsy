@@ -1,12 +1,9 @@
 <section class="pattern component-cropsy layout row">
 
   <section class="crop-stage">
+
     <div class="image-container">
-      {{#if model.url}}
-        <img {{bind-attr src="model.url"}}>
-      {{else}}
-        <p>We're having trouble finding your image.</p>
-      {{/if}}
+      <img {{bind-attr src="model.url"}}>
     </div>
 
   </section>
