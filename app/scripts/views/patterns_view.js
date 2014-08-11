@@ -2,9 +2,6 @@ Cropsy.PatternsView = Ember.View.extend({
 
   didInsertElement: function() {
 
-    // Initialize foundation
-    $(document).foundation();
-
     var $image = $(".img-container img"),
       $dataX = $("#data-x"),
       $dataY = $("#data-y"),
