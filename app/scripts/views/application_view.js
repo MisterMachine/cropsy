@@ -16,7 +16,7 @@ Cropsy.ApplicationView = Ember.View.extend({
       $(".viewer").zoomer("resize");
     });
 
-    $('.crop').cropbox( {width: 600, height: 250} )
+    $('.crop').cropbox( {width: 320, height: 320} )
     .on('cropbox', function (e, result) {
         console.log(result);
     });
