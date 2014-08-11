@@ -6273,6 +6273,8 @@ button .name {
 .crop-stage .img-container {
   max-height: 500px;
   overflow: hidden; }
+.crop-stage .cropper-container > img {
+  filter: blur(3px); }
 
 .result-panel {
   position: relative; }
