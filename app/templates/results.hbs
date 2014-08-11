@@ -4,12 +4,20 @@
   </figure>
 
   <fieldset class="result-sizes">
-    <label class="dimension">Height
-      {{input type="text" placeholder="px"}}
+    <label class="dimension">X
+      {{input type="text" placeholder="px" valueBinding="controller.cropX"}}
+    </label>
+
+    <label class="dimension">Y
+      {{input type="text" placeholder="px" valueBinding="controller.cropY"}}
     </label>
 
     <label class="dimension">Width
-      {{input type="text" placeholder="px"}}
+      {{input type="text" placeholder="px" valueBinding="controller.cropW"}}
+    </label>
+
+    <label class="dimension">Height
+      {{input type="text" placeholder="px" valueBinding="controller.cropH"}}
     </label>
   </fieldset>
 
