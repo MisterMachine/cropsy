@@ -23,6 +23,18 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-ratio:before {
+	content: "\e613";
+}
+.icon-3-2:before {
+	content: "\e614";
+}
+.icon-16-9:before {
+	content: "\e615";
+}
+.icon-1-1:before {
+	content: "\e616";
+}
 .icon-image:before {
 	content: "\e600";
 }
