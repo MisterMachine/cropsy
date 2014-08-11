@@ -1,5 +1,6 @@
 Cropsy.ResultsController = Ember.ObjectController.extend({
 
+  // computed properties
   cropX: 50,
   cropY: 50,
   cropW: 400,
@@ -8,7 +9,7 @@ Cropsy.ResultsController = Ember.ObjectController.extend({
   actions: {
 
     cancel: function(image) {
-      this.transitionToRoute('images', image.id);
+      this.replaceRoute('images', image.id);
     },
 
     finish: function(image) {
