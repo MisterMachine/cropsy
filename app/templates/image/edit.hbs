@@ -1,3 +1,26 @@
+<aside id="preview" class="result-panel invisible">
+  <div id="results-ratio" class="result-preview">
+    <div class="image-preview"></div>
+  </div>
+  <div class="panel callout">
+    <fieldset class="result-sizes">
+      <label class="dimension">X
+        {{input name="data-x" type="text" placeholder="px"}}
+      </label>
+      <label class="dimension">Y
+        {{input name="data-y" value="" type="text" placeholder="px"}}
+      </label>
+      <label class="dimension">Height
+        {{input name="data-height" type="text" placeholder="px"}}
+      </label>
+
+      <label class="dimension">Width
+        {{input name="data-width" value="" type="text" placeholder="px"}}
+      </label>
+    </fieldset>
+  </div>
+</aside>
+
 <section class="tools">
   <div class="icon-bar three-up">
     <a class="item" data-dropdown="topDrop" data-options="align: top">
@@ -8,7 +31,7 @@
       <i class="icon-image"></i>
       <label>Preview</label>
     </a>
-    <a class="item">
+    <a id="crop-image" class="item" {{action 'cropImage' this }}>
       <i class="icon-crop"></i>
       <label>Crop</label>
     </a>

@@ -7,12 +7,14 @@
     </div>
   </header>
 
-  <section class="row index-panel">
-    <dl class="sub-nav">
+  <section class="row">
+    <div class="large-3 columns">
     {{#each image in model}}
-    <dd>{{#link-to 'image' image}}{{image.title}}{{/link-to}}</dd>
+      {{#link-to 'image' image}}
+      <div class="column"><img {{bind-attr src="image.url"}}></div>
+      {{/link-to}}
     {{/each}}
-    </dl>
+    </div>
   </section>
 
 </div>

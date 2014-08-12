@@ -1,5 +1,7 @@
 Cropsy.ImageEditController = Ember.ObjectController.extend({
+
   needs: 'image',
+
   actions: {
     save: function(){
       self = this
@@ -10,30 +12,12 @@ Cropsy.ImageEditController = Ember.ObjectController.extend({
     },
 
     setAspectRatio: function(image) {
-
       image = $(image);
-
-      console.log(image);
-
-
-
-    },
-
-    zoomIn: function(image) {
-      console.log('zoom in');
-    },
-
-    zoomOut: function(image) {
-      console.log('zoom out');
     },
 
     cropImage: function(image) {
-      console.log(image.id);
-
-      this.transitionToRoute('results', image.id);
-
+      this.transitionToRoute('/images/'+image.id);
     }
-
 
   }
 });

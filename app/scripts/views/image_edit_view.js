@@ -24,6 +24,11 @@ Cropsy.ImageEditView = Ember.View.extend({
       $image.cropper("setAspectRatio", $ratio);
     });
 
+    // Destroy the tool and screen when done cropping
+    $('#crop-image').on('click', function() {
+      $image.cropper("destroy");
+    });
+
     function setResults(data) {
       $("input[name='data-x']" ).val(data.x);
       $("input[name='data-y']" ).val(data.y);
