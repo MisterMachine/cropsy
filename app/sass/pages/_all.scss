@@ -12,9 +12,14 @@
 
   .result-panel {
     @include grid-column(12);
+    @extend %rhythm;
 
       @media #{$large-up} {
           @include grid-column(4);
+      }
+
+      .result {
+        @extend %rhythm;
       }
   }
 

@@ -1,25 +1,55 @@
 .component-cropsy {
 
   .crop-stage {  
+    @extend %gridded;
     position: relative;
     overflow: hidden;
   }
 
   .image-original {
-    @extend %gridded;
+    overflow: hidden;
 
-    .original {
-      @extend %inset;
-      background-color: #efefef;
-      width: 100%;
+     @media #{$large-up} {
+      max-height: 500px;
     }
   }
 
   .result-panel {
-    @extend %rhythm;
+    @include clearfix;
+    position: relative;
 
-    .result {
+    .result-preview {
+      @extend %inset;
       @extend %rhythm;
+      height: 0;
+      overflow: hidden;
+      padding: 55% 0 0 0;
+      position: relative;
+      width: 100%;
+
+      &.threextwo {
+        padding: 55% 0 0 0;
+      }
+
+      &.threextwo {
+        padding: 75% 0 0 0;
+      }
+
+      &.square {
+        padding: 100% 0 0 0;
+      }
+
+      .image-preview {
+        height: 100%;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        img {
+          max-width: none;
+        }
+      }
     }
   }
 
@@ -47,17 +77,6 @@
   }
 }
 
-.top-bar {
-  z-index: 100;
-  position: relative;
-}
-
-.notifications {
-  a {
-    color: #fff;
-  }
-}
-
 .icon-bar {
   @extend %raised;
   border-color: #000;
@@ -73,23 +92,11 @@
 
   label {
     display: none;
+
     @media #{$medium-up} {
       display: block;
     }  
   }
-}
-
-.staged {
-  @extend %gridded;
-  padding: 72% 0 0 0;
-}
-
-.masked img {
-  @extend %masked;
-}
-
-.viewer {
-  @extend %gridded;
 }
 
 .pattern {
@@ -97,16 +104,7 @@
 }
 
 .crop-stage {
-  @extend %gridded;
-
-  .img-container {
-    overflow: hidden;
-
-    @media #{$large-up} {
-      max-height: 500px;
-    }
-  }
-
+  
   .cropper-container > img {
     filter: blur(3px);
   }
@@ -135,65 +133,11 @@
   }
 }
 
-.result-panel {
-  position: relative;
-  @include clearfix;
-
-  .result-preview {
-    @extend %inset;
-    @extend %rhythm;
-    height: 0;
-    overflow: hidden;
-    padding: 55% 0 0 0;
-    position: relative;
-    width: 100%;
-
-    &.threextwo {
-      padding: 55% 0 0 0;
-    }
-
-    &.threextwo {
-      padding: 75% 0 0 0;
-    }
-
-    &.square {
-      padding: 100% 0 0 0;
-    }
-
-    .img-preview {
-      height: 100%;
-      opacity: .5;
-      position: absolute;
-      top: 0;
-      width: 100%;
-
-      img {
-        max-width: none;
-      }
-    }
-  }
-}
-
-.prototype {
+@media #{$small-only} {
 
   .crop-stage {
     margin-bottom: 1em;
     position: relative;
-
-    // .crop-container {
-    //   height: 0;
-    //   overflow: hidden;
-    //   padding: 75% 0 0 0;
-    //   position: relative;
-    //   width: 100%;
-    // }
-
-    // .img-container {
-    //   position: absolute;
-    //   height: 100%;
-    //   top: 0;
-    //   width: 100%;
-    // }
   }
 
   .panel.callout {
@@ -204,12 +148,16 @@
     display: block;
     margin-bottom: 5em;
 
+    &.invisible {
+      visibility: hidden;
+    }
+
     &.active {
       display: none;
     }
   }
 
-  &.tools {
+  .tools {
     position: fixed;
     bottom: .25em;
   }
