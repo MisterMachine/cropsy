@@ -1,0 +1,9 @@
+server_name:
+    host: "mistermachineshop.com"
+    user: "root"
+    sync: true
+    path:
+        local: "dist/"
+        remote: "../var/www/cropsy"
+    exclude: 
+        - ".DS_Store"
