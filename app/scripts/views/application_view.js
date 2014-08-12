@@ -1,6 +1,6 @@
 Cropsy.ApplicationView = Ember.View.extend({
 
-    didInsertElement: function() {
+  didInsertElement: function() {
 
     // Initialize foundation
     $(document).foundation();
