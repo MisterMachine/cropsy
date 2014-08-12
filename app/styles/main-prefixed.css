@@ -6319,24 +6319,30 @@ button .name {
       .result-panel .result-preview .img-preview img {
         max-width: none; }
 
-.prototype .crop-stage {
-  margin-bottom: 1em;
-  position: relative; }
-.prototype .panel.callout {
-  display: none; }
-.prototype .result-panel {
-  display: block;
-  margin-bottom: 5em; }
-  .prototype .result-panel.active {
-    display: none; }
-.prototype.tools {
-  position: fixed;
-  bottom: .25em; }
-.prototype .f-dropdown.open {
-  margin-top: -180px !important; }
-  .prototype .f-dropdown.open:before, .prototype .f-dropdown.open:after {
+@media only screen and (max-width: 40em) {
+  .crop-stage {
+    margin-bottom: 1em;
+    position: relative; }
+
+  .panel.callout {
     display: none; }
 
+  .result-panel {
+    display: block;
+    margin-bottom: 5em; }
+    .result-panel.invisible {
+      visibility: hidden; }
+    .result-panel.active {
+      display: none; }
+
+  .tools {
+    position: fixed;
+    bottom: .25em; }
+
+  .f-dropdown.open {
+    margin-top: -180px !important; }
+    .f-dropdown.open:before, .f-dropdown.open:after {
+      display: none; } }
 /*!
  * Cropper v0.4.4
  * https://github.com/fengyuanchen/cropper

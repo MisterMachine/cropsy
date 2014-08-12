@@ -174,26 +174,11 @@
   }
 }
 
-.prototype {
+@media #{$small-only} {
 
   .crop-stage {
     margin-bottom: 1em;
     position: relative;
-
-    // .crop-container {
-    //   height: 0;
-    //   overflow: hidden;
-    //   padding: 75% 0 0 0;
-    //   position: relative;
-    //   width: 100%;
-    // }
-
-    // .img-container {
-    //   position: absolute;
-    //   height: 100%;
-    //   top: 0;
-    //   width: 100%;
-    // }
   }
 
   .panel.callout {
@@ -204,12 +189,16 @@
     display: block;
     margin-bottom: 5em;
 
+    &.invisible {
+      visibility: hidden;
+    }
+
     &.active {
       display: none;
     }
   }
 
-  &.tools {
+  .tools {
     position: fixed;
     bottom: .25em;
   }

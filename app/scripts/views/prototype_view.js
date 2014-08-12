@@ -32,6 +32,7 @@ Cropsy.PrototypeView = Ember.View.extend({
 
     $("#toggle-preview").click(function() {
         $("#preview")
+        .removeClass("invisible")
         .toggleClass("active");
         $('html, body').animate({
         scrollTop: $("#preview").offset().top
