@@ -30,6 +30,14 @@ Cropsy.PrototypeView = Ember.View.extend({
         $image.cropper("reset");
     });
 
+    $("#toggle-preview").click(function() {
+        $("#preview")
+        .toggleClass("active");
+        $('html, body').animate({
+        scrollTop: $("#preview").offset().top
+        }, 500);
+    });
+
     $("#16-9-ratio").click(function() {
         $image.cropper("setAspectRatio", "1.778");
         $("#results-ratio")
@@ -50,7 +58,6 @@ Cropsy.PrototypeView = Ember.View.extend({
         .removeClass("sixteenxnine threextwo")
         .addClass("square");
     });
-
   }
 
 });
