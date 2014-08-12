@@ -2,7 +2,7 @@ Cropsy.PrototypeView = Ember.View.extend({
 
   didInsertElement: function() {
 
-    var $image = $(".img-container img"),
+    var $image = $(".image-original img"),
       $dataX = $("#data-x"),
       $dataY = $("#data-y"),
       $dataHeight = $("#data-height"),
@@ -17,7 +17,7 @@ Cropsy.PrototypeView = Ember.View.extend({
             width: 640,
             height: 360
         },
-        preview: ".img-preview",
+        preview: ".image-preview",
         done: function(data) {
             $dataX.val(data.x);
             $dataY.val(data.y);
