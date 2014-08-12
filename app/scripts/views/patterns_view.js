@@ -6,7 +6,7 @@ Cropsy.PatternsView = Ember.View.extend({
       $dataX = $("#data-x"),
       $dataY = $("#data-y"),
       $dataHeight = $("#data-height"),
-      $dataWidth = $("#data-width")
+      $dataWidth = $("#data-width");
 
     $image.cropper({
         aspectRatio: 16 / 9,
@@ -31,7 +31,7 @@ Cropsy.PatternsView = Ember.View.extend({
     });
 
     $('.aspect-ratio').on('click', function() {
-      $ratio = $(this).data('value');
+      var $ratio = $(this).data('value');
       $image.cropper("setAspectRatio", $ratio);
     });
 

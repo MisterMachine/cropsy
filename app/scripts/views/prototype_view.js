@@ -6,7 +6,7 @@ Cropsy.PrototypeView = Ember.View.extend({
       $dataX = $("#data-x"),
       $dataY = $("#data-y"),
       $dataHeight = $("#data-height"),
-      $dataWidth = $("#data-width")
+      $dataWidth = $("#data-width");
 
     $image.cropper({
         aspectRatio: 16 / 9,

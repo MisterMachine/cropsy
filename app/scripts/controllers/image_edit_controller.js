@@ -4,7 +4,7 @@ Cropsy.ImageEditController = Ember.ObjectController.extend({
 
   actions: {
     save: function(){
-      self = this
+      var self = this;
       this.get('buffer').forEach(function(attr){
         self.get('controllers.image.model').set(attr.key, attr.value);
       });
