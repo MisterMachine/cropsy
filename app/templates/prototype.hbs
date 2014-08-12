@@ -1,12 +1,14 @@
 <section class="prototype row">
 
   <section class="crop-stage">
-    <div class="img-container">
-      <img src="/images/nasa-bw-1.jpg">
+    <div class="crop-container">
+      <div class="img-container">
+        <img src="/images/nasa-bw-1.jpg">
+      </div>
     </div>
   </section>
 
-  <aside class="result-panel">
+  <aside id="preview" class="result-panel">
     <div id="results-ratio" class="result-preview">
       <div class="img-preview"></div>
     </div>
@@ -25,15 +27,15 @@
   
 </section>
 
-<section class="tools">
+<section class="prototype tools">
   <div class="icon-bar three-up">
-    <a class="item">
-      <i class="icon-wrench"></i>
-      <label>Edit</label>
-    </a>
     <a class="item" data-dropdown="topDrop" data-options="align: top">
       <i class="icon-checkbox-partial"></i>
       <label>Aspect</label>
+    </a>
+    <a id="toggle-preview" class="item">
+      <i class="icon-image"></i>
+      <label>Preview</label>
     </a>
     <a class="item">
       <i class="icon-crop"></i>

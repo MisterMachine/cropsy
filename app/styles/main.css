@@ -6304,14 +6304,19 @@ button .name {
       .result-panel .result-preview .img-preview img {
         max-width: none; }
 
-.prototype {
-  height: 100%; }
-  .prototype .crop-stage {
-    margin-bottom: 1em; }
-  .prototype .panel.callout {
+.prototype .crop-stage {
+  margin-bottom: 1em;
+  position: relative; }
+.prototype .panel.callout {
+  display: none; }
+.prototype .result-panel {
+  display: block;
+  margin-bottom: 5em; }
+  .prototype .result-panel.active {
     display: none; }
-  .prototype .result-panel {
-    display: none; }
+.prototype.tools {
+  position: fixed;
+  bottom: .25em; }
 
 /*!
  * Cropper v0.4.4
@@ -8940,13 +8945,13 @@ Copyright (c) 2014 Daniel Eden
   animation-name: zoomOutUp; }
 
 .component-cropsy.layout {
-  margin-top: 1em;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 75rem; }
+  max-width: 75rem;
+  height: 100%; }
   .component-cropsy.layout:after {
     content: "";
     display: table;

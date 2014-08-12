@@ -175,10 +175,25 @@
 }
 
 .prototype {
-  height: 100%;
 
   .crop-stage {
     margin-bottom: 1em;
+    position: relative;
+
+    // .crop-container {
+    //   height: 0;
+    //   overflow: hidden;
+    //   padding: 75% 0 0 0;
+    //   position: relative;
+    //   width: 100%;
+    // }
+
+    // .img-container {
+    //   position: absolute;
+    //   height: 100%;
+    //   top: 0;
+    //   width: 100%;
+    // }
   }
 
   .panel.callout {
@@ -186,6 +201,16 @@
   }
 
   .result-panel {
-    display: none;
+    display: block;
+    margin-bottom: 5em;
+
+    &.active {
+      display: none;
+    }
+  }
+
+  &.tools {
+    position: fixed;
+    bottom: .25em;
   }
 }
