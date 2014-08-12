@@ -146,15 +146,16 @@
   }
 
   .result-panel {
-    display: block;
+    display: none;
     margin-bottom: 5em;
 
     &.invisible {
+      display: block;
       visibility: hidden;
     }
 
     &.active {
-      display: none;
+      display: block;
     }
   }
 

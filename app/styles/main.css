@@ -6296,12 +6296,13 @@ button .name {
     display: none; }
 
   .result-panel {
-    display: block;
+    display: none;
     margin-bottom: 5em; }
     .result-panel.invisible {
+      display: block;
       visibility: hidden; }
     .result-panel.active {
-      display: none; }
+      display: block; }
 
   .tools {
     position: fixed;

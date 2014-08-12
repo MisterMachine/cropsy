@@ -24,6 +24,16 @@ Cropsy.ImageEditView = Ember.View.extend({
       $image.cropper("setAspectRatio", $ratio);
     });
 
+    // Added this from proto. Needs tuning
+    $("#toggle-preview").click(function() {
+        $("#preview")
+        .removeClass("invisible")
+        .toggleClass("active");
+        $('html, body').animate({
+        scrollTop: $("#preview").offset().top
+        }, 500);
+    });
+
     // Destroy the tool and screen when done cropping
     $('#crop-image').on('click', function() {
       $image.cropper("destroy");
