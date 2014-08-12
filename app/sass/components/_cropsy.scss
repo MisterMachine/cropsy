@@ -213,4 +213,12 @@
     position: fixed;
     bottom: .25em;
   }
+
+  .f-dropdown.open {
+    margin-top: -180px !important;
+
+    &:before, &:after {
+      display: none;
+    }
+  }
 }

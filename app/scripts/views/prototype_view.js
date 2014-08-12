@@ -33,6 +33,9 @@ Cropsy.PrototypeView = Ember.View.extend({
     $("#toggle-preview").click(function() {
         $("#preview")
         .toggleClass("active");
+        $('html, body').animate({
+        scrollTop: $("#preview").offset().top
+        }, 500);
     });
 
     $("#16-9-ratio").click(function() {

@@ -6332,6 +6332,10 @@ button .name {
 .prototype.tools {
   position: fixed;
   bottom: .25em; }
+.prototype .f-dropdown.open {
+  margin-top: -180px !important; }
+  .prototype .f-dropdown.open:before, .prototype .f-dropdown.open:after {
+    display: none; }
 
 /*!
  * Cropper v0.4.4
