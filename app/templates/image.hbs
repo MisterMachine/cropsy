@@ -1,36 +1,31 @@
-<section class="pattern component-cropsy layout row">
+<section class="row">
 
   <section class="crop-stage">
-
-    <div class="img-container">
-      <img {{bind-attr src="model.url"}}>
+    <div class="crop-container">
+      <div class="image-container">
+        <img {{bind-attr src="model.url"}}>
+      </div>
     </div>
-
   </section>
 
-  <aside class="result-panel">
-    <div class="result-preview">
-      <div class="img-preview"></div>
+  <aside id="preview" class="result-panel invisible">
+    <div id="results-ratio" class="result-preview">
+      <div class="image-preview"></div>
     </div>
     <div class="panel callout">
       <fieldset class="result-sizes">
-        <label class="dimension">X
-          {{input name="data-x" value="" type="text" placeholder="px"}}
-        </label>
-        <label class="dimension">Y
-          {{input name="data-y" value="" type="text" placeholder="px"}}
-        </label>
-        <label class="dimension">Width
-          {{input name="data-width" value="" type="text" placeholder="px"}}
-        </label>
         <label class="dimension">Height
           {{input name="data-height" type="text" placeholder="px"}}
+        </label>
+
+        <label class="dimension">Width
+          {{input name="data-width" value="" type="text" placeholder="px"}}
         </label>
       </fieldset>
     </div>
   </aside>
 
-  <button class="radius" {{action 'edit' this}}>Edit</button>
   {{outlet}}
 
 </section>
+
