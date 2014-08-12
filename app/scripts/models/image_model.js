@@ -20,19 +20,19 @@ Cropsy.Image.FIXTURES = [
   {
     id: 0,
     url: 'http://fillmurray.com/650/400',
-    title: 'Fill Murray'
+    title: 'Steve Murray'
   },
   
   {
     id: 1,
     url: 'http://www.fillmurray.com/700/400',
-    title: 'Bourbon Murray'
+    title: 'Fill Murray'
   },
 
   {
     id: 2,
     url: 'http://www.fillmurray.com/600/500',
-    title: 'Steve Murray'
+    title: 'Squint Murray'
   }
 
 ];
