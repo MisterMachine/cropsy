@@ -2,8 +2,8 @@
 
   .crop-stage {  
     @extend %gridded;
-    position: relative;
     overflow: hidden;
+    position: relative;
   }
 
   .image-original {
@@ -80,14 +80,14 @@
 .icon-bar {
   @extend %raised;
   border-color: #000;
-  border-style: solid;
   border-radius: 4px;
+  border-style: solid;
   z-index: 100;
   position: relative;
 
   > *:hover {
-    background: #000;
     @extend %eased;
+    background: #000;
   }
 
   label {
@@ -99,11 +99,7 @@
   }
 }
 
-.pattern {
-  @extend %rhythm;
-}
-
-// Cropper overwrites
+// Cropper pretty
 .crop-stage {
   
   .cropper-container > img {
@@ -134,6 +130,7 @@
   }
 }
 
+// Small size only
 @media #{$small-only} {
 
   .crop-stage {
@@ -149,19 +146,19 @@
     display: none;
     margin-bottom: 5em;
 
+    &.active {
+      display: block;
+    }
+
     &.invisible {
       display: block;
       visibility: hidden;
     }
-
-    &.active {
-      display: block;
-    }
   }
 
   .tools {
-    position: fixed;
     bottom: .25em;
+    position: fixed;
   }
 
   .f-dropdown.open {

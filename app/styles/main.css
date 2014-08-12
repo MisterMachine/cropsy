@@ -6049,13 +6049,6 @@ h6,
 p {
   font-family: "adelle", Georgia, serif; }
 
-blockquote {
-  margin-bottom: 2em; }
-  blockquote p {
-    font-size: 2em;
-    line-height: 1.5em;
-    margin-bottom: 2em; }
-
 .serif {
   font-family: "adelle", Georgia, serif; }
 
@@ -6074,7 +6067,7 @@ blockquote {
 .rhythm {
   margin-bottom: 1em; }
 
-.component-cropsy .result-panel .result-preview, .pattern, .component-cropsy.layout .result-panel, .component-cropsy.layout .result-panel .result {
+.component-cropsy .result-panel .result-preview, .component-cropsy.layout .result-panel, .component-cropsy.layout .result-panel .result, .pattern {
   margin-bottom: 1em; }
 
 .component-cropsy .result-panel .result-preview {
@@ -6211,8 +6204,8 @@ button .name {
   100% {
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
 .component-cropsy .crop-stage {
-  position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 .component-cropsy .image-original {
   overflow: hidden; }
   @media only screen and (min-width: 64.063em) {
@@ -6259,8 +6252,8 @@ button .name {
 
 .icon-bar {
   border-color: #000;
-  border-style: solid;
   border-radius: 4px;
+  border-style: solid;
   z-index: 100;
   position: relative; }
   .icon-bar > *:hover {
@@ -6298,15 +6291,15 @@ button .name {
   .result-panel {
     display: none;
     margin-bottom: 5em; }
+    .result-panel.active {
+      display: block; }
     .result-panel.invisible {
       display: block;
       visibility: hidden; }
-    .result-panel.active {
-      display: block; }
 
   .tools {
-    position: fixed;
-    bottom: .25em; }
+    bottom: .25em;
+    position: fixed; }
 
   .f-dropdown.open {
     margin-top: -180px !important; }

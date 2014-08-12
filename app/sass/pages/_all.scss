@@ -44,3 +44,7 @@
     padding: 0 .5em;
   }
 }
+
+.pattern {
+  @extend %rhythm;
+}
