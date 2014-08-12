@@ -1,4 +1,4 @@
-Cropsy.ProtoypeView = Ember.View.extend({
+Cropsy.PrototypeView = Ember.View.extend({
 
   didInsertElement: function() {
 
