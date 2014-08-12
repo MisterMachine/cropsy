@@ -53,5 +53,4 @@ Cropsy.PrototypeView = Ember.View.extend({
 
   }
 
-
 });

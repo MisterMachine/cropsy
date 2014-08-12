@@ -6,5 +6,5 @@ Cropsy.ApplicationView = Ember.View.extend({
     $(document).foundation();
 
   }
-
+  
 });
