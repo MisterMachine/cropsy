@@ -24,7 +24,11 @@
   }
 
   .footer {
-    @include grid-column(12);
+    @include grid-row();
+
+    .toolbar {
+      @include grid-column(12);
+    }
   }
 
   .result-sizes {
@@ -41,7 +45,10 @@
 
   .tools {
     @include grid-row();
-    padding: 0 .5em;
+
+    .icon-bar {
+      @include clearfix;
+    }
   }
 }
 
