@@ -1,19 +1,21 @@
-<footer>
-  <fieldset class="toolbar">
-    <div class="tool-aspect">
-      <button class="warning radius" data-dropdown="menu-aspect-ratios"><i class="icon-image"></i> <span class="name"> Aspect Ratio</span></button>
-      <ul id="menu-aspect-ratios" class="f-dropdown open" data-options="align:top" data-dropdown="drop" {{action 'setAspectRatio'}}>
-        <li><a href="#">Square</a></li>
-        <li><a href="#">3x2</a></li>
-        <li><a href="#">16x9</a></li>
-      </ul>
-    </div>
-    <ul class="tool-zoom button-group radius">
-      <li><button class="dark zoom-in" {{action 'zoomIn' this }}><i class="icon-plus"></i><span class="name"> Zoom In</span></button></li>
-      <li><button class="dark zoom-out" {{action 'zoomOut' this }}><i class="icon-minus"></i> <span class="name"> Zoom Out</span></button></li>
-    </ul>
-    <div class="tool-crop">
-      <button class="success radius" {{action 'cropImage' this }}><i class="icon-crop"></i> <span class="name">Crop</span> </button>
-    </div>
-  </fieldset> 
-</footer>
+<section class="pattern row">
+  <div class="icon-bar three-up">
+    <a class="item">
+      <i class="icon-wrench"></i>
+      <label>Edit</label>
+    </a>
+    <a class="item" data-dropdown="topDrop" data-options="align: top">
+      <i class="icon-checkbox-partial"></i>
+      <label>Aspect</label>
+    </a>
+    <a class="item">
+      <i class="icon-crop"></i>
+      <label>Crop</label>
+    </a>
+  </div>
+ <ul id="topDrop" class="f-dropdown" data-dropdown-content>
+    <li><a class="aspect-ratio" data-value="1"><i class="icon-1-1"></i> Square</a></li>
+    <li><a class="aspect-ratio" data-value="1.5"><i class="icon-3-2"></i> 3 x 2 </a></li>
+    <li><a class="aspect-ratio" data-value="1.778"><i class="icon-16-9"></i> 16 x 9 </a></li>
+  </ul>
+</section>

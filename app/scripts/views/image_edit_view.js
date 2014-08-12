@@ -2,11 +2,7 @@ Cropsy.ImageEditView = Ember.View.extend({
 
   didInsertElement: function() {
 
-    var $image = $(".img-container img"),
-      $dataX = $("#data-x"),
-      $dataY = $("#data-y"),
-      $dataHeight = $("#data-height"),
-      $dataWidth = $("#data-width")
+    var $image = $(".img-container img")
 
     $image.cropper({
         aspectRatio: 16 / 9,
@@ -19,12 +15,21 @@ Cropsy.ImageEditView = Ember.View.extend({
         },
         preview: ".img-preview",
         done: function(data) {
-            $dataX.val(data.x);
-            $dataY.val(data.y);
-            $dataHeight.val(data.height);
-            $dataWidth.val(data.width);
+          setResults(data);
         }
     });
+
+    $('.aspect-ratio').on('click', function() {
+      $ratio = $(this).data('value');
+      $image.cropper("setAspectRatio", $ratio);
+    });
+
+    function setResults(data) {
+      $("input[name='data-x']" ).val(data.x);
+      $("input[name='data-y']" ).val(data.y);
+      $("input[name='data-width']" ).val(data.width);
+      $("input[name='data-height']" ).val(data.height);
+    }
 
   }
 

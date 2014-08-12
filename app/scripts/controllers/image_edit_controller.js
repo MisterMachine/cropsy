@@ -10,7 +10,13 @@ Cropsy.ImageEditController = Ember.ObjectController.extend({
     },
 
     setAspectRatio: function(image) {
-      console.log('set aspect ratio');
+
+      image = $(image);
+
+      console.log(image);
+
+
+
     },
 
     zoomIn: function(image) {
