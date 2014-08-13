@@ -16,22 +16,22 @@ Cropsy.Image.reopen({
 
 // delete below here if you do not want fixtures
 Cropsy.Image.FIXTURES = [
-  
+
   {
     id: 0,
-    url: '/images/bill1.jpeg',
+    url: 'images/bill4.jpeg',
     title: 'Grey Murray'
   },
-  
+
   {
     id: 1,
-    url: '/images/bill2.jpeg',
+    url: 'images/bill2.jpeg',
     title: 'Bourbon Murray'
   },
 
   {
     id: 2,
-    url: '/images/bill3.jpeg',
+    url: 'images/bill3.jpeg',
     title: 'Stripes Murray'
   }
 
