@@ -15,7 +15,7 @@ Cropsy.ImageEditController = Ember.ObjectController.extend({
       image = $(image);
     },
 
-    cropImage: function(image) {
+    resetImage: function(image) {
       this.transitionToRoute('/images/'+image.id);
     }
 
