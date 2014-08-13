@@ -8962,6 +8962,11 @@ Copyright (c) 2014 Daniel Eden
 
 .notifications a {
   color: #fff; }
+.notifications button {
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding-bottom: .5em !important; }
 
 .component-cropsy.layout {
   width: 100%;
