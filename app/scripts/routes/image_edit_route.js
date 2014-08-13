@@ -1,7 +1,9 @@
 Cropsy.ImageEditRoute = Ember.Route.extend({
+
   model: function(params) {
     return this.get('store').find('image', this.modelFor('image').id);
   },
+
   setupController: function(controller, model){
     controller.set('model', model);
     var buffer = model.get('attributes').map(function(attr){
@@ -9,5 +11,6 @@ Cropsy.ImageEditRoute = Ember.Route.extend({
     });
     controller.set('buffer', buffer);
   }
+
 });
 
