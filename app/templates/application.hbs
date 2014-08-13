@@ -11,15 +11,6 @@
     <!-- Right Nav Section -->
     <ul class="right">
       <li class="active"><a href="#" {{action 'addImage' this }}>Gallery</a></li>
-      <li class="has-dropdown">
-        <a href="#" data-dropdown="menu-pages">Pages</a>
-        <ul id="menu-pages" class="dropdown">
-        <li>{{#link-to 'patterns'}}Patterns{{/link-to}}</li>
-        {{#each model}}
-        <li>{{#link-to 'image' this}}{{this.title}}{{/link-to}}</li>
-        {{/each}}
-        </ul>
-      </li>
     </ul>
   </section>
 </nav>

@@ -17,6 +17,7 @@
 
   .result-panel {
     @include clearfix;
+    padding-top: 1em;
     position: relative;
 
     .result-preview {
@@ -60,22 +61,15 @@
     overflow: hidden;
     margin-top: 1em;
 
-    [class^="tool-"], [class*=" tool-"] {
+    button {
       float: left;
       margin-right: 1em;
+      margin-bottom: 0;
 
       &:last-child {
         float: right;
         margin-right: 0;
       }
-
-      button {
-        margin-bottom: 0;
-      }  
-    }
-
-    .tool-zoom button {
-      border-color: #0078a0;
     }
   }
 }
@@ -140,6 +134,14 @@
   .cropper-dashed {
     border-style: solid;
   }
+
+  .f-dropdown.open {
+    margin-top: -180px !important;
+
+    &:before, &:after {
+      display: none;
+    }
+  }
 }
 
 // Small size only
@@ -173,7 +175,7 @@
     position: fixed;
   }
 
-  .f-dropdown.open {
+    .f-dropdown.open {
     margin-top: -180px !important;
 
     &:before, &:after {
