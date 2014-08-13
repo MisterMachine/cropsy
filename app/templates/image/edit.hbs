@@ -25,7 +25,7 @@
   <div class="toolbar">
     <button class="success radius" data-dropdown="topDrop" data-options="align: top"><i class="icon-ratio"></i> <span class="name">Aspect</span> </button>
 
-    <button id="reset-image" class="secondary radius" {{action 'cropImage' this }}><i class="icon-close"></i> <span class="name">Cancel</span> </button>
+    <button class="reset-image secondary radius" {{action 'resetImage' this }}><i class="icon-close"></i> <span class="name">Cancel</span> </button>
   </div>
   <ul id="topDrop" class="f-dropdown" data-dropdown-content>
   <li><a class="aspect-ratio" data-value="1"><i class="icon-1-1"></i> Square</a></li>
@@ -44,7 +44,7 @@
       <i class="icon-image"></i>
       <label>Preview</label>
     </a>
-    <a id="reset-image" class="item" {{action 'resetImage' this }}>
+    <a class="reset-image item" {{action 'resetImage' this }}>
       <i class="icon-close"></i>
       <label>Reset</label>
     </a>

@@ -35,7 +35,7 @@ Cropsy.ImageEditView = Ember.View.extend({
     });
 
     // Destroy the tool and screen when done cropping
-    $('#reset-image').on('click', function() {
+    $('.reset-image').on('click', function() {
       $image.cropper("destroy");
     });
 
