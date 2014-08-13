@@ -76,8 +76,8 @@ Cropping images is a complex task. We focused on building a tool that would work
 
 One key task of desktop cropping tools is the difficulty involved in resizing. We solved this problem by offering developers to option to offer the user popular presets based on their content guidelines.
 
-* Create a results preview css class
-* Add your event to the image edit view file
+* Create an new aspect ratio css class
+* Add your event to the image edit view js file
 * Your new aspect ration will be added to the ration dropdown
 
 Preview your image on mobile was clumsy, so using media queries we placed the preview panel off screen in order to allow the user to focus on one task at a time.
