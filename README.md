@@ -74,20 +74,30 @@ deploy
 
 Cropping images is a complex task. We focused on building a tool that would work on mobile/touch devices first and scale up to work on a desktop client.
 
-One key task of desktop cropping tools is the difficulty involved in resizing. We solved this problem by offering developers to option to offer the user popular presets based on their content guidelines.
+One key task of desktop cropping tools is the difficulty involved in resizing. We solved this problem by offering developers the option to offer their users popular presets based on content guidelines.
 
-Preview your image on mobile was clumsy, so using media queries we placed the preview panel off screen in order to allow the user to focus on one task at a time.
+* Create an new aspect ratio css class
+* Add your event to the image edit view js file
+* Your new aspect ratio will be added to the ratio dropdown
+
+Previewing an image on mobile was clumsy, so using media queries we placed the preview panel off screen in order to allow the user to focus on one task at a time.
+
+* Preview button will display off canvas on mobile
+* Editing the aspect ratio setting will update the preview canvas
 
 ## Why Cropsy
 
 We experimented with Hammer.js and a pure touch experience, but eventually decided that we needed to include a simple desktop feature set in the component.
 
+* [Cropbox](https://github.com/acornejo/jquery-cropbox)
+* [Hammer](http://hammerjs.github.io/)
+
 We landed on extending the offerings of cropper.js as a mobile first component and focusing on the primary elements that support a core touch experience. 
 
-[Cropper](https://github.com/fengyuanchen/cropper)
+* [Cropper](https://github.com/fengyuanchen/cropper)
 
 We chose Foundation as a Front End framework for its blank visual style and Bourbon for its powerful mixins.
 
-[Foundation](http://foundation.zurb.com/docs/)
-[Bourbon](http://bourbon.io/)
+* [Foundation](http://foundation.zurb.com/docs/)
+* [Bourbon](http://bourbon.io/)
 
