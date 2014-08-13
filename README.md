@@ -1,10 +1,14 @@
 # cropsy
 
-Ember starter app with Foundation
+> Image Cropper component demonstration application built with Ember.
 
-## Dependancies
+## Getting Started
 
-Yeoman
+This app was build using [Yeoman](http://yeoman.io/), the Web's scaffolding tool. The Yeoman workflow combines three tools:
+
+1. Yo
+2. Grunt
+3. Bower
 
 `npm install -g yo`
 
