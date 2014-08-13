@@ -1,7 +1,5 @@
 Cropsy.ImageEditController = Ember.ObjectController.extend({
 
-  needs: 'image',
-
   actions: {
 
     setAspectRatio: function(image) {
