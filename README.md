@@ -44,7 +44,7 @@ To start your server run:
 
 ```shell
 grunt serve
-
+```
 
 ## Building Cropsy for Production
 

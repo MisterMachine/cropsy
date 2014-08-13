@@ -26,6 +26,7 @@ Cropsy.ImageEditView = Ember.View.extend({
     $('.aspect-ratio').on('click', function() {
       var $ratio = $(this).data('value');
       $image.cropper("setAspectRatio", $ratio);
+      $('.dropdown').removeClass('active');
     });
 
     // Added this from proto. Needs tuning
