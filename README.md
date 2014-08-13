@@ -75,4 +75,10 @@ We experimented with Hammer.js and a pure touch experience, but eventually decid
 
 We landed on extending the offerings of cropper.js as a mobile first component and focusing on the primary elements that support a core touch experience. 
 
+[Cropper](https://github.com/fengyuanchen/cropper)
+
 We chose Foundation as a Front End framework for its blank visual style and Bourbon for its powerful mixins.
+
+[Foundation](http://foundation.zurb.com/docs/)
+[Bourbon](http://bourbon.io/)
+
