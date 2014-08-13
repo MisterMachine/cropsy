@@ -43,23 +43,9 @@
   <!-- Outlet: Toolbar -->
   <footer>
     <fieldset class="toolbar">
-      <div class="tool-aspect">
-        <button class="warning radius" {{action 'setAspectRatio' this }} data-dropdown="drop1"><i class="icon-image"></i> <span class="name"> Aspect Ratio</span></button>
-{{!--         <ul id="drop1" class="f-dropdown open" data-options="align:top" data-dropdown="drop" style="display: block; left: 0;">
-          <li><a href="#">Square</a></li>
-          <li><a href="#">3x2</a></li>
-          <li><a href="#">16x9</a></li>
-        </ul> --}}
-      </div>
+      <button class="warning radius" {{action 'setAspectRatio' this }} data-dropdown="drop1"><i class="icon-image"></i> <span class="name"> Aspect Ratio</span></button>
 
-      <ul class="tool-zoom button-group radius">
-        <li><button class="dark zoom-in"><i class="icon-plus"></i><span class="name"> Zoom In</span></button></li>
-        <li><button class="dark zoom-out"><i class="icon-minus"></i> <span class="name"> Zoom Out</span></button></li>
-      </ul>
-
-      <div class="tool-crop">
-        <button class="success radius"><i class="icon-crop"></i> <span class="name">Crop</span> </button>
-      </div>
+      <button class="success radius"><i class="icon-crop"></i> <span class="name">Crop</span> </button>
     </fieldset> 
   </footer>
 
@@ -107,7 +93,7 @@
   <!-- Outlet: Stage -->
   <h3>Cropper</h3>
   <section class="crop-stage">
-    <div class="img-container">
+    <div class="image-container">
     <img src="/images/nasa-bw-1.jpg">
     </div>
   </section>
@@ -115,7 +101,7 @@
 
   <aside class="result-panel">
     <div id="results-ratio" class="result-preview">
-      <div class="img-preview"></div>
+      <div class="image-preview"></div>
     </div>
     <div class="panel callout">
       <fieldset class="result-sizes">
