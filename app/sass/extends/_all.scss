@@ -54,7 +54,7 @@
   transform: translateY(-50%);
 }  
 
-button {
+.button, button {
   @extend %raised;
   @extend %icon-button;
 }  

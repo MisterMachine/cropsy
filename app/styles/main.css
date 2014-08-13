@@ -6077,7 +6077,7 @@ p {
   background: url(/images/grid.png);
   box-shadow: inset 0px 3px 3px 0px rgba(50, 50, 50, 0.25); }
 
-button, .icon-bar {
+.button, button, .icon-bar {
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset; }
 
@@ -6090,14 +6090,14 @@ button, .icon-bar {
   border: 1px solid rgba(204, 204, 204, 0.5); }
 
 @media only screen and (min-width: 40.063em) {
-  button i {
+  .button i, button i {
     margin-left: -.75em;
     margin-right: .5em; } }
-button .name {
+.button .name, button .name {
   display: none;
   font-size: 100%; }
   @media only screen and (min-width: 40.063em) {
-    button .name {
+    .button .name, button .name {
       display: inline-block; } }
 
 @font-face {
@@ -6467,11 +6467,11 @@ button .name {
   padding: 1em;
   overflow: hidden;
   margin-top: 1em; }
-  .component-cropsy .toolbar button {
+  .component-cropsy .toolbar .button, .component-cropsy .toolbar button {
     float: left;
     margin-right: 1em;
     margin-bottom: 0; }
-    .component-cropsy .toolbar button:last-child {
+    .component-cropsy .toolbar .button:last-child, .component-cropsy .toolbar button:last-child {
       float: right;
       margin-right: 0; }
 
