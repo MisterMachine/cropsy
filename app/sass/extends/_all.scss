@@ -2,6 +2,10 @@
   margin-bottom: 1em;
 }
 
+%rhythm-up {
+  margin-top: 1em;
+}
+
 %dark {
   background-color: #333;
 }
@@ -12,7 +16,7 @@
 
 %gridded {
   background: url(/images/grid.png);
-  box-shadow: inset 0px 3px 3px 0px rgba(50, 50, 50, 0.25);
+  @extend %inset;
 }
 
 %raised {
@@ -52,6 +56,14 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+%hide-show {
+  display: none;
+
+  @media #{$medium-up} {
+    display: block;
+  }
 }  
 
 .button, button {

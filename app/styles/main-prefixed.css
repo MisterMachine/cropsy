@@ -6066,15 +6066,17 @@ button, .button {
 .rhythm {
   margin-bottom: 1em; }
 
-.component-cropsy .result-panel .result-preview, .component-cropsy.layout .result-panel, .component-cropsy.layout .result-panel .result, .pattern {
+.component-cropsy .crop-stage, .component-cropsy .result-panel .result-preview, .component-cropsy.layout .result-panel, .component-cropsy.layout .result-panel .result, .pattern {
   margin-bottom: 1em; }
 
-.component-cropsy .result-panel .result-preview {
+.component-cropsy .toolbar, .tools .icon-bar {
+  margin-top: 1em; }
+
+.component-cropsy .crop-stage, .component-cropsy .result-panel .result-preview {
   box-shadow: inset 0px 3px 3px 0px rgba(50, 50, 50, 0.25); }
 
 .component-cropsy .crop-stage {
-  background: url(/images/grid.png);
-  box-shadow: inset 0px 3px 3px 0px rgba(50, 50, 50, 0.25); }
+  background: url(/images/grid.png); }
 
 .button, button, .tools .icon-bar {
   border-width: 1px 1px 3px;
@@ -6099,6 +6101,12 @@ button, .button {
   @media only screen and (min-width: 40.063em) {
     .button .name, button .name {
       display: inline-block; } }
+
+.component-cropsy .result-panel .panel.callout, .tools .icon-bar label {
+  display: none; }
+  @media only screen and (min-width: 40.063em) {
+    .component-cropsy .result-panel .panel.callout, .tools .icon-bar label {
+      display: block; } }
 
 @font-face {
   font-family: 'icomoon';
@@ -6463,8 +6471,7 @@ button, .button {
 
 .component-cropsy .crop-stage {
   overflow: hidden;
-  position: relative;
-  margin-bottom: 1em; }
+  position: relative; }
 .component-cropsy .crop-container {
   overflow: hidden; }
 .component-cropsy .result-panel {
@@ -6508,13 +6515,7 @@ button, .button {
       width: 100%; }
       .component-cropsy .result-panel .result-preview .image-preview img {
         max-width: none; }
-  .component-cropsy .result-panel .panel.callout {
-    display: none; }
-    @media only screen and (min-width: 40.063em) {
-      .component-cropsy .result-panel .panel.callout {
-        display: block; } }
 .component-cropsy .toolbar {
-  margin-top: 1em;
   padding: 1em;
   position: relative; }
   .component-cropsy .toolbar .button, .component-cropsy .toolbar button {
@@ -6537,18 +6538,12 @@ button, .button {
     border-color: #000;
     border-radius: 4px;
     border-style: solid;
-    z-index: 100;
-    margin-top: 1em;
-    position: relative; }
+    position: relative;
+    z-index: 100; }
     .tools .icon-bar > *:hover {
       background: #000; }
     .tools .icon-bar.center > * {
       width: 100%; }
-    .tools .icon-bar label {
-      display: none; }
-      @media only screen and (min-width: 40.063em) {
-        .tools .icon-bar label {
-          display: block; } }
 
 .top-bar {
   z-index: 100;
