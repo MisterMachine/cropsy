@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-This app was build using [Yeoman](http://yeoman.io/), the Web's scaffolding tool. The Yeoman workflow combines three tools:
+This app was build using [Yeoman](http://yeoman.io), the Web's scaffolding tool. The Yeoman workflow combines three tools:
 
 1. Yo
 2. Grunt
@@ -49,5 +49,18 @@ grunt serve
 ## Building Cropsy for Production
 
 
+
+
 ## Deployment
+
+Cropsy is configured to use the [rsync-deploy](https://github.com/rosszurowski/deploy) gem. To deploy this app to a remote web serve, add your web server configuration do the following:
+
+1. Rename /deploy-sample.yml to /deploy.yml
+2. Open deploy.yml in your favorite text editor and add your web server host, user, and remote path.
+
+Then run:
+
+```shell
+deploy
+```
 
