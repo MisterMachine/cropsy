@@ -6437,6 +6437,7 @@ button .name {
     .component-cropsy .image-original {
       max-height: 500px; } }
 .component-cropsy .result-panel {
+  padding-top: 1em;
   position: relative; }
   .component-cropsy .result-panel:after {
     content: "";
@@ -6466,16 +6467,13 @@ button .name {
   padding: 1em;
   overflow: hidden;
   margin-top: 1em; }
-  .component-cropsy .toolbar [class^="tool-"], .component-cropsy .toolbar [class*=" tool-"] {
+  .component-cropsy .toolbar button {
     float: left;
-    margin-right: 1em; }
-    .component-cropsy .toolbar [class^="tool-"]:last-child, .component-cropsy .toolbar [class*=" tool-"]:last-child {
+    margin-right: 1em;
+    margin-bottom: 0; }
+    .component-cropsy .toolbar button:last-child {
       float: right;
       margin-right: 0; }
-    .component-cropsy .toolbar [class^="tool-"] button, .component-cropsy .toolbar [class*=" tool-"] button {
-      margin-bottom: 0; }
-  .component-cropsy .toolbar .tool-zoom button {
-    border-color: #0078a0; }
 
 .tools {
   padding: 0 .5em; }
@@ -6512,6 +6510,10 @@ button .name {
   height: 7px; }
 .crop-stage .cropper-dashed {
   border-style: solid; }
+.crop-stage .f-dropdown.open {
+  margin-top: -180px !important; }
+  .crop-stage .f-dropdown.open:before, .crop-stage .f-dropdown.open:after {
+    display: none; }
 
 @media only screen and (max-width: 40em) {
   .crop-stage {
@@ -8964,7 +8966,7 @@ Copyright (c) 2014 Daniel Eden
     padding-right: 0.9375rem;
     width: 100%;
     float: left; }
-    @media only screen and (min-width: 64.063em) {
+    @media only screen and (min-width: 40.063em) {
       .component-cropsy.layout .crop-stage {
         padding-left: 0.9375rem;
         padding-right: 0.9375rem;
@@ -8975,7 +8977,7 @@ Copyright (c) 2014 Daniel Eden
     padding-right: 0.9375rem;
     width: 100%;
     float: left; }
-    @media only screen and (min-width: 64.063em) {
+    @media only screen and (min-width: 40.063em) {
       .component-cropsy.layout .result-panel {
         padding-left: 0.9375rem;
         padding-right: 0.9375rem;
@@ -9013,7 +9015,7 @@ Copyright (c) 2014 Daniel Eden
       padding-right: 0.9375rem;
       width: 100%;
       float: left; }
-      @media only screen and (min-width: 64.063em) {
+      @media only screen and (min-width: 40.063em) {
         .component-cropsy.layout .result-sizes .dimension {
           padding-left: 0.9375rem;
           padding-right: 0.9375rem;
