@@ -58,6 +58,7 @@
   .toolbar {
     @extend %module;
     padding: 1em;
+    position: relative;
     overflow: hidden;
     margin-top: 1em;
 
@@ -102,6 +103,27 @@
     @media #{$medium-up} {
       display: block;
     }  
+  }
+}
+
+.dropdown {
+  background: #fff;
+  border: 1px solid #efefef;
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  width: 200px;
+
+  li {
+    border-bottom: 1px solid #efefef;
+    display: block;
+    line-height: 1.5em;
+  }
+
+  a {
+    font-size: .9em;
+    display: block;
+    padding: 0 1em;
   }
 }
 
@@ -175,7 +197,7 @@
     position: fixed;
   }
 
-    .f-dropdown.open {
+  .f-dropdown.open {
     margin-top: -180px !important;
 
     &:before, &:after {
