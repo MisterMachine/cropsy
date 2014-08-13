@@ -16,7 +16,8 @@
     "smarttabs": true,
     "globals": {
         "Cropsy": true,
-        "jQuery": true,
+        "jQuery": false,
+        "$": false,
         "Ember": true,
         "Handlebars": true,
         "DS": true
