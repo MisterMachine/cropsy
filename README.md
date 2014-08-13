@@ -1,6 +1,6 @@
 # cropsy
 
-> Image Cropper component demonstration application built with Ember.
+> Image Cropper prototype built with Ember, Yeoman, and Foundation.
 
 ## Getting Started
 
@@ -10,32 +10,44 @@ This app was build using [Yeoman](http://yeoman.io/), the Web's scaffolding tool
 2. Grunt
 3. Bower
 
-`npm install -g yo`
+To get started, clone this repository and ````cd```` into your newly created directory:
 
-Ember.js Generator <-- might not need this for cloning project
+```shell
+cd cropsy
+```
 
-`npm install -g generator-ember`
+This prototype requires that you have Yeoman installed. To do so, run:
 
-Foundation
+```shell
+npm install -g yo
+```
 
-`gem install foundation`
+Install the neccessary gem dependancies:
 
-
-## Getting Started
-
-Clone Git Repository: 
-
-`git clone https://github.com/menslow/cropsy`
-
-Install Gem dependancies:
-
-`bundle install`
+```shell
+bundle install
+```
 
 Install Bower dependancies:
 
-`bower install`
+```shell
+bower install
+```
 
-Install Node dependancies:
+Lastly, install the Node dependancies:
 
-`npm install`
+```shell
+npm install
+```
+
+To start your server run:
+
+```shell
+grunt serve
+
+
+## Building Cropsy for Production
+
+
+## Deployment
 
