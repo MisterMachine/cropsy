@@ -25,6 +25,7 @@
 
   .footer {
     @include grid-row();
+    clear: left;
 
     .toolbar {
       @include grid-column(12);

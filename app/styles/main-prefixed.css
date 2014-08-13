@@ -6477,10 +6477,9 @@ p {
       .component-cropsy .result-panel .result-preview .image-preview img {
         max-width: none; }
 .component-cropsy .toolbar {
+  margin-top: 1em;
   padding: 1em;
-  position: relative;
-  overflow: hidden;
-  margin-top: 1em; }
+  position: relative; }
   .component-cropsy .toolbar .button, .component-cropsy .toolbar button {
     float: left;
     margin-right: 1em;
@@ -6516,8 +6515,8 @@ p {
   list-style: none;
   margin: 0;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -120px;
+  left: -1px;
   width: 200px; }
   .dropdown.active {
     display: block; }
@@ -9030,7 +9029,8 @@ Copyright (c) 2014 Daniel Eden
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
-    max-width: 75rem; }
+    max-width: 75rem;
+    clear: left; }
     .component-cropsy.layout .footer:after {
       content: "";
       display: table;
