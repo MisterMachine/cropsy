@@ -22,7 +22,7 @@ This prototype requires that you have Yeoman installed. To do so, run:
 npm install -g yo
 ```
 
-Install the neccessary gem dependancies:
+Install the necessary gem dependancies:
 
 ```shell
 bundle install
@@ -48,7 +48,13 @@ grunt serve
 
 ## Building Cropsy for Production
 
+Yeoman is great for development because it allows you to work in unconcatinated and unminified files which makes development easier. When you're ready to prepare your application for distribution, run:
 
+```shell
+grunt build
+```
+
+Grunt will take care of concatenating and minifying your JavaScript and CSS files so they're ready for deploying to your production web server. Your production ready application is placed in the /dist folder.
 
 
 ## Deployment
