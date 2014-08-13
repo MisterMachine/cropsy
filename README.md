@@ -70,3 +70,24 @@ Then run:
 deploy
 ```
 
+## Using Cropsy
+
+Cropping images is a complex task. We focused on building a tool that would work on mobile/touch devices first and scale up to work on a desktop client.
+
+One key task of desktop cropping tools is the difficulty involved in resizing. We solved this problem by offering developers to option to offer the user popular presets based on their content guidelines.
+
+Preview your image on mobile was clumsy, so using media queries we placed the preview panel off screen in order to allow the user to focus on one task at a time.
+
+## Why Cropsy
+
+We experimented with Hammer.js and a pure touch experience, but eventually decided that we needed to include a simple desktop feature set in the component.
+
+We landed on extending the offerings of cropper.js as a mobile first component and focusing on the primary elements that support a core touch experience. 
+
+[Cropper](https://github.com/fengyuanchen/cropper)
+
+We chose Foundation as a Front End framework for its blank visual style and Bourbon for its powerful mixins.
+
+[Foundation](http://foundation.zurb.com/docs/)
+[Bourbon](http://bourbon.io/)
+
