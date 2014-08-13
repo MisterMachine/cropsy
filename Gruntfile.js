@@ -160,18 +160,18 @@ module.exports = function (grunt) {
         /*uglify: {
             dist: {}
         },*/
-        rev: {
-            dist: {
-                files: {
-                    src: [
-                        '<%= yeoman.dist %>/scripts/{,*/}*.js',
-                        '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
-                        '<%= yeoman.dist %>/fonts/*'
-                    ]
-                }
-            }
-        },
+        // rev: {
+        //     dist: {
+        //         files: {
+        //             src: [
+        //                 '<%= yeoman.dist %>/scripts/{,*/}*.js',
+        //                 '<%= yeoman.dist %>/styles/{,*/}*.css',
+        //                 '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
+        //                 '<%= yeoman.dist %>/fonts/*'
+        //             ]
+        //         }
+        //     }
+        // },
         useminPrepare: {
             html: '.tmp/index.html',
             options: {
@@ -368,7 +368,7 @@ module.exports = function (grunt) {
         'cssmin',
         'uglify',
         'copy',
-        'rev',
+        //'rev',
         'usemin'
     ]);
 
