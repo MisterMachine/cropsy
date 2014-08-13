@@ -27,26 +27,20 @@ Cropsy.ImageEditView = Ember.View.extend({
     $('.aspect-ratio').on('click', function() {
       var $ratio = $(this).data('value');
       $image.cropper("setAspectRatio", $ratio);
+
+      switch($ratio) {
+        case 1:
+          $("#results-ratio").removeClass("sixteenxnine threextwo").addClass("square");
+          break;
+        case 1.5:
+          $("#results-ratio").removeClass("sixteenxnine square").addClass("threextwo");
+          break;
+        default:
+          $("#results-ratio").removeClass("threextwo square").addClass("sixteenxnine");
+      }
+
       $('.dropdown').removeClass('active');
     });
-
-    $(".16-9-ratio").click(function() {
-        $("#results-ratio")
-        .removeClass("threextwo square")
-        .addClass("sixteenxnine");
-     });
- 
-     $(".3-2-ratio").click(function() {
-        $("#results-ratio")
-        .removeClass("sixteenxnine square")
-        .addClass("threextwo");
-     });
- 
-     $(".1-1-ratio").click(function() {
-        $("#results-ratio")
-        .removeClass("sixteenxnine threextwo")
-       .addClass("square");
-     });
 
     // Added this from proto. Needs tuning
     $("#toggle-preview").click(function() {
