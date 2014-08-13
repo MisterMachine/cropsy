@@ -75,6 +75,14 @@ Then run:
 deploy
 ```
 
+## UI Patterns
+
+All UI patterns can be found at the patterns template
+
+```shell
+/app/template/patterns
+```
+
 ## Using Cropsy
 
 Cropping images is a complex task. We focused on building a tool that would work on mobile/touch devices first and scale up to work on a desktop client.
@@ -105,4 +113,3 @@ We chose Foundation as a Front End framework for its blank visual style and Bour
 
 * [Foundation](http://foundation.zurb.com/docs/)
 * [Bourbon](http://bourbon.io/)
-
