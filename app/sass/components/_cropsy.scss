@@ -13,8 +13,28 @@
 
   .result-panel {
     @include clearfix;
-    padding-top: 1em;
     position: relative;
+    display: block;
+    margin-bottom: 5em;
+    padding-top: 0;
+
+    @media #{$small-only} {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      &.invisible {
+        display: block;
+        visibility: hidden;
+      }
+    }
+
+    @media #{$medium-up} {
+      display: block;
+      padding-top: 1em;
+    }  
 
     .result-preview {
       @extend %inset;
@@ -49,6 +69,14 @@
         }
       }
     }
+
+    .panel.callout {
+      display: none;
+
+      @media #{$medium-up} {
+        display: block;
+      }  
+    }
   }
 
   .toolbar {
@@ -71,124 +99,39 @@
 }
 
 .tools {
+  bottom: .25em;
+  position: fixed;
   padding: 0 .5em;
-}
 
-.icon-bar {
-  @extend %raised;
-  border-color: #000;
-  border-radius: 4px;
-  border-style: solid;
-  z-index: 100;
-  margin-top: 1em;
-  position: relative;
-
-  > *:hover {
-    @extend %eased;
-    background: #000;
-  }
-
-  &.center > * {
-    width: 100%;
-  }
-
-  label {
-    display: none;
-
-    @media #{$medium-up} {
-      display: block;
-    }  
-  }
-}
-
-.dropdown {
-  display: none;
-  background: #fff;
-  border: 1px solid #efefef;
-  list-style: none;
-  margin: 0;
-  position: absolute;
-  top: -120px;
-  left: -1px;
-  width: 200px;
-
-  &.active {
-    display: block;
-  }
-
-  li {
-    border-bottom: 1px solid #efefef;
-    display: block;
-    line-height: 1.5em;
-  }
-
-  a {
-    display: block;
-    font-size: .9em;
-    padding: .5em 1em;
-  }
-}
-
-// Cropper pretty
-.crop-stage {
-  
-  .cropper-container > img {
-    filter: blur(3px);
-  }
-
-  .cropper-viewer {
-    outline-color: #fff;
-  }
-
-  .cropper-point {
-    display: none;
-
-    &.point-se {
-      display: block;
-      height: 1em;
-      width: 1em;
-    }
-  }
-
-  .cropper-line {
-    background-color: #000;
-    height: 7px;
-  }
-
-  .cropper-dashed {
-    border-style: solid;
-  }
-}
-
-// Small size only
-@media #{$small-only} {
-
-  .crop-stage {
-    margin-bottom: 1em;
+  @media #{$medium-up} { 
+    bottom: auto;
     position: relative;
   }
 
-  .panel.callout {
-    display: none;
-  }
+  .icon-bar {
+    @extend %raised;
+    border-color: #000;
+    border-radius: 4px;
+    border-style: solid;
+    z-index: 100;
+    margin-top: 1em;
+    position: relative;
 
-  .result-panel {
-    display: none;
-    margin-bottom: 5em;
-    padding-top: 0;
-
-    &.active {
-      display: block;
+    > *:hover {
+      @extend %eased;
+      background: #000;
     }
 
-    &.invisible {
-      display: block;
-      visibility: hidden;
+    &.center > * {
+      width: 100%;
     }
-  }
 
-  .tools {
-    bottom: .25em;
-    position: fixed;
+    label {
+      display: none;
+
+      @media #{$medium-up} {
+        display: block;
+      }  
+    }
   }
 }

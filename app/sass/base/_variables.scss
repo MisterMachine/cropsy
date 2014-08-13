@@ -1,6 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
-@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700);
 
 // $BaseType
 // -------------------------------------//
@@ -15,8 +13,8 @@ $h4-font-size: rem-calc(23) !default;
 $h5-font-size: rem-calc(18) !default;
 $h6-font-size: 1rem !default;
 
-$font-family: "adelle", Georgia, serif;
-$sans-font-family: "proxima-nova", Helvetica, Arial, sans-serif; 
+$font-family: "Open Sans", Georgia, serif;
+$sans-font-family: "Open Sans", Helvetica, Arial, sans-serif; 
 
 // $Brand Colors
 
