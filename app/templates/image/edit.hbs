@@ -21,19 +21,23 @@
   </div>
 </aside>
 
-<footer class="footer">
+<footer class="footer show-for-medium-up">
   <div class="toolbar">
-    <a class="button success radius"><i class="icon-ratio"></i> <span class="name">Aspect</span> </a>
-    <a class="button reset-image secondary radius" {{action 'resetImage' this }}><i class="icon-close"></i> <span class="name">Cancel</span> </a>
+    <a class="button success radius dropdown-toggle">
+      <i class="icon-ratio"></i> <span class="name">Aspect</span> 
+    </a>
+    <a class="button reset-image secondary radius" {{action 'resetImage' this }}>
+      <i class="icon-close"></i> <span class="name">Cancel</span>
+    </a>
+    <ul class="dropdown">
+      <li><a class="aspect-ratio" data-value="1"><i class="icon-1-1"></i> Square</a></li>
+      <li><a class="aspect-ratio" data-value="1.5"><i class="icon-3-2"></i> 3 x 2 </a></li>
+      <li><a class="aspect-ratio" data-value="1.778"><i class="icon-16-9"></i> 16 x 9 </a></li>
+    </ul>
   </div>
-  <ul id="top-drop-medium" class="dropdown">
-    <li><a class="aspect-ratio" data-value="1"><i class="icon-1-1"></i> Square</a></li>
-    <li><a class="aspect-ratio" data-value="1.5"><i class="icon-3-2"></i> 3 x 2 </a></li>
-    <li><a class="aspect-ratio" data-value="1.778"><i class="icon-16-9"></i> 16 x 9 </a></li>
-  </ul>
 </footer>
 
-<section class="tools">
+<section class="tools show-for-small-only">
   <div class="icon-bar three-up">
     <a class="item dropdown-toggle" data-options="align: top">
       <i class="icon-ratio"></i>
@@ -48,7 +52,7 @@
       <label>Reset</label>
     </a>
   </div>
-  <ul id="top-drop-small" class="dropdown" data-dropdown-content>
+  <ul class="dropdown">
     <li><a class="aspect-ratio" data-value="1"><i class="icon-1-1"></i> Square</a></li>
     <li><a class="aspect-ratio" data-value="1.5"><i class="icon-3-2"></i> 3 x 2 </a></li>
     <li><a class="aspect-ratio" data-value="1.778"><i class="icon-16-9"></i> 16 x 9 </a></li>
