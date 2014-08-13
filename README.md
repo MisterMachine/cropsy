@@ -78,7 +78,7 @@ One key task of desktop cropping tools is the difficulty involved in resizing. W
 
 * Create an new aspect ratio css class
 * Add your event to the image edit view js file
-* Your new aspect ration will be added to the ration dropdown
+* Your new aspect ratio will be added to the ratio dropdown
 
 Preview your image on mobile was clumsy, so using media queries we placed the preview panel off screen in order to allow the user to focus on one task at a time.
 
