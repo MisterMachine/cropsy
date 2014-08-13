@@ -46,6 +46,11 @@ To start your server run:
 grunt serve
 ```
 
+## Demo
+
+[View the Demo](http://cropsy.mistermachineshop.com)
+
+
 ## Building Cropsy for Production
 
 Yeoman is great for development because it allows you to work in unconcatinated and unminified files which makes development easier. When you're ready to prepare your application for distribution, run:
