@@ -8,10 +8,10 @@ Cropsy.ImageEditView = Ember.View.extend({
         aspectRatio: 16 / 9,
         dragCrop: false,
         data: {
-            x: 480,
-            y: 60,
-            width: 640,
-            height: 360
+            x: 100,
+            y: 100,
+            width: 320,
+            height: 180
         },
         preview: ".image-preview",
         done: function(data) {
