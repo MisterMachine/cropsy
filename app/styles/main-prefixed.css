@@ -6510,19 +6510,24 @@ p {
         display: block; } }
 
 .dropdown {
+  display: none;
   background: #fff;
   border: 1px solid #efefef;
   list-style: none;
   margin: 0;
   position: absolute;
+  top: 0;
+  left: 0;
   width: 200px; }
+  .dropdown.active {
+    display: block; }
   .dropdown li {
     border-bottom: 1px solid #efefef;
     display: block;
     line-height: 1.5em; }
   .dropdown a {
-    font-size: .9em;
     display: block;
+    font-size: .9em;
     padding: .5em 1em; }
 
 .crop-stage .cropper-container > img {
