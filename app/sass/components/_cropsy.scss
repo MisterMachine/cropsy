@@ -7,12 +7,8 @@
     margin-bottom: 1em;
   }
 
-  .image-original {
+  .crop-container {
     overflow: hidden;
-
-     @media #{$large-up} {
-      max-height: 500px;
-    }
   }
 
   .result-panel {
@@ -162,14 +158,6 @@
   .cropper-dashed {
     border-style: solid;
   }
-
-  .f-dropdown.open {
-    margin-top: -180px !important;
-
-    &:before, &:after {
-      display: none;
-    }
-  }
 }
 
 // Small size only
@@ -187,6 +175,7 @@
   .result-panel {
     display: none;
     margin-bottom: 5em;
+    padding-top: 0;
 
     &.active {
       display: block;
@@ -201,13 +190,5 @@
   .tools {
     bottom: .25em;
     position: fixed;
-  }
-
-  .f-dropdown.open {
-    margin-top: -180px !important;
-
-    &:before, &:after {
-      display: none;
-    }
   }
 }

@@ -6431,11 +6431,8 @@ p {
   overflow: hidden;
   position: relative;
   margin-bottom: 1em; }
-.component-cropsy .image-original {
+.component-cropsy .crop-container {
   overflow: hidden; }
-  @media only screen and (min-width: 64.063em) {
-    .component-cropsy .image-original {
-      max-height: 500px; } }
 .component-cropsy .result-panel {
   padding-top: 1em;
   position: relative; }
@@ -6531,10 +6528,6 @@ p {
   height: 7px; }
 .crop-stage .cropper-dashed {
   border-style: solid; }
-.crop-stage .f-dropdown.open {
-  margin-top: -180px !important; }
-  .crop-stage .f-dropdown.open:before, .crop-stage .f-dropdown.open:after {
-    display: none; }
 
 @media only screen and (max-width: 40em) {
   .crop-stage {
@@ -6546,7 +6539,8 @@ p {
 
   .result-panel {
     display: none;
-    margin-bottom: 5em; }
+    margin-bottom: 5em;
+    padding-top: 0; }
     .result-panel.active {
       display: block; }
     .result-panel.invisible {
@@ -6555,12 +6549,7 @@ p {
 
   .tools {
     bottom: .25em;
-    position: fixed; }
-
-  .f-dropdown.open {
-    margin-top: -180px !important; }
-    .f-dropdown.open:before, .f-dropdown.open:after {
-      display: none; } }
+    position: fixed; } }
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
