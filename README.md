@@ -74,13 +74,13 @@ deploy
 
 Cropping images is a complex task. We focused on building a tool that would work on mobile/touch devices first and scale up to work on a desktop client.
 
-One key task of desktop cropping tools is the difficulty involved in resizing. We solved this problem by offering developers to option to offer the user popular presets based on their content guidelines.
+One key task of desktop cropping tools is the difficulty involved in resizing. We solved this problem by offering developers the option to offer their users popular presets based on content guidelines.
 
 * Create an new aspect ratio css class
 * Add your event to the image edit view js file
 * Your new aspect ratio will be added to the ratio dropdown
 
-Preview your image on mobile was clumsy, so using media queries we placed the preview panel off screen in order to allow the user to focus on one task at a time.
+Previewing an image on mobile was clumsy, so using media queries we placed the preview panel off screen in order to allow the user to focus on one task at a time.
 
 * Preview button will display off canvas on mobile
 * Editing the aspect ratio setting will update the preview canvas
